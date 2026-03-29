@@ -1,0 +1,12 @@
+@WebAPI_HostAddress = http://localhost:5254
+
+POST {{WebAPI_HostAddress}}/api/auth/register
+Content-Type: application/json
+
+{
+  "fullName": "Dung",
+  "email": "dung@gmail.com",
+  "password": "123456"
+}
+
+###
