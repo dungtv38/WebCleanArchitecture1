@@ -1,6 +1,7 @@
 ﻿using Application.DTOs;
 
 using Application.Interfaces;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 [ApiController]
@@ -20,6 +21,10 @@ public class AuthController : ControllerBase
         var result = await _authService.RegisterAsync(request);
         return Ok(result);
     }
+  
+ 
+
+
 
     [HttpPost("login")]
     public async Task<IActionResult> Login(LoginRequest request)

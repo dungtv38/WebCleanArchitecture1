@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Domain.Entities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,5 +12,7 @@ namespace Application.DTOs
         public string FullName { get; set; } = default!;
         public string Email { get; set; } = default!;
         public string Password { get; set; } = default!;
+        public string PhoneNumber { get; set; } = default!;
+        public UserRole Role { get; set; }
     }
 }

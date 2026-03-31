@@ -16,5 +16,6 @@ namespace Domain.Entities
         public RoomType RoomType { get; set; }
 
         public ICollection<BookingDetail> BookingDetails { get; set; }
+        public ICollection<RoomImage> Images { get; set; } = new List<RoomImage>();
     }
 }

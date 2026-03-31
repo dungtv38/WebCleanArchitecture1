@@ -38,6 +38,11 @@ namespace Infrastructure.Persistence.Configurations
             builder.HasMany(x => x.RoomTypes)
                    .WithOne(rt => rt.Hotel)
                    .HasForeignKey(rt => rt.HotelId);
+
+            builder.HasMany(x => x.Images)
+                    .WithOne(img => img.Hotel)
+                    .HasForeignKey(img => img.HotelId)
+                    .OnDelete(DeleteBehavior.Cascade);
         }
     }
 }

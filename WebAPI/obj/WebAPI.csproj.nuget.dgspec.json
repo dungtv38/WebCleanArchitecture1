@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Administrator\\source\\repos\\WebTral\\WebAPI\\WebAPI.csproj": {}
+    "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture11\\WebAPI\\WebAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Administrator\\source\\repos\\WebTral\\Application\\Application.csproj": {
+    "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture11\\Application\\Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Administrator\\source\\repos\\WebTral\\Application\\Application.csproj",
+        "projectUniqueName": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture11\\Application\\Application.csproj",
         "projectName": "Application",
-        "projectPath": "C:\\Users\\Administrator\\source\\repos\\WebTral\\Application\\Application.csproj",
+        "projectPath": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture11\\Application\\Application.csproj",
         "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Administrator\\source\\repos\\WebTral\\Application\\obj\\",
+        "outputPath": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture11\\Application\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -32,8 +32,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\Administrator\\source\\repos\\WebTral\\Domain\\Domain.csproj": {
-                "projectPath": "C:\\Users\\Administrator\\source\\repos\\WebTral\\Domain\\Domain.csproj"
+              "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture11\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture11\\Domain\\Domain.csproj"
               }
             }
           }
@@ -79,14 +79,14 @@
         }
       }
     },
-    "C:\\Users\\Administrator\\source\\repos\\WebTral\\Domain\\Domain.csproj": {
+    "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture11\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Administrator\\source\\repos\\WebTral\\Domain\\Domain.csproj",
+        "projectUniqueName": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture11\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "C:\\Users\\Administrator\\source\\repos\\WebTral\\Domain\\Domain.csproj",
+        "projectPath": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture11\\Domain\\Domain.csproj",
         "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Administrator\\source\\repos\\WebTral\\Domain\\obj\\",
+        "outputPath": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture11\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -144,14 +144,14 @@
         }
       }
     },
-    "C:\\Users\\Administrator\\source\\repos\\WebTral\\Infrastructure\\Infrastructure.csproj": {
+    "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture11\\Infrastructure\\Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Administrator\\source\\repos\\WebTral\\Infrastructure\\Infrastructure.csproj",
+        "projectUniqueName": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture11\\Infrastructure\\Infrastructure.csproj",
         "projectName": "Infrastructure",
-        "projectPath": "C:\\Users\\Administrator\\source\\repos\\WebTral\\Infrastructure\\Infrastructure.csproj",
+        "projectPath": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture11\\Infrastructure\\Infrastructure.csproj",
         "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Administrator\\source\\repos\\WebTral\\Infrastructure\\obj\\",
+        "outputPath": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture11\\Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -172,11 +172,11 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\Administrator\\source\\repos\\WebTral\\Application\\Application.csproj": {
-                "projectPath": "C:\\Users\\Administrator\\source\\repos\\WebTral\\Application\\Application.csproj"
+              "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture11\\Application\\Application.csproj": {
+                "projectPath": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture11\\Application\\Application.csproj"
               },
-              "C:\\Users\\Administrator\\source\\repos\\WebTral\\Domain\\Domain.csproj": {
-                "projectPath": "C:\\Users\\Administrator\\source\\repos\\WebTral\\Domain\\Domain.csproj"
+              "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture11\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture11\\Domain\\Domain.csproj"
               }
             }
           }
@@ -248,14 +248,14 @@
         }
       }
     },
-    "C:\\Users\\Administrator\\source\\repos\\WebTral\\WebAPI\\WebAPI.csproj": {
+    "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture11\\WebAPI\\WebAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Administrator\\source\\repos\\WebTral\\WebAPI\\WebAPI.csproj",
+        "projectUniqueName": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture11\\WebAPI\\WebAPI.csproj",
         "projectName": "WebAPI",
-        "projectPath": "C:\\Users\\Administrator\\source\\repos\\WebTral\\WebAPI\\WebAPI.csproj",
+        "projectPath": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture11\\WebAPI\\WebAPI.csproj",
         "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Administrator\\source\\repos\\WebTral\\WebAPI\\obj\\",
+        "outputPath": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture11\\WebAPI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -276,11 +276,11 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\Administrator\\source\\repos\\WebTral\\Application\\Application.csproj": {
-                "projectPath": "C:\\Users\\Administrator\\source\\repos\\WebTral\\Application\\Application.csproj"
+              "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture11\\Application\\Application.csproj": {
+                "projectPath": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture11\\Application\\Application.csproj"
               },
-              "C:\\Users\\Administrator\\source\\repos\\WebTral\\Infrastructure\\Infrastructure.csproj": {
-                "projectPath": "C:\\Users\\Administrator\\source\\repos\\WebTral\\Infrastructure\\Infrastructure.csproj"
+              "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture11\\Infrastructure\\Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture11\\Infrastructure\\Infrastructure.csproj"
               }
             }
           }
@@ -301,6 +301,10 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[8.0.25, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.6.2, )"

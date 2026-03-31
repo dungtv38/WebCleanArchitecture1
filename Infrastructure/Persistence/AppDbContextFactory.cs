@@ -6,6 +6,7 @@ namespace Infrastructure.Persistence;
 public class AppDbContextFactory : IDesignTimeDbContextFactory<AppDbContext>
 {
     public AppDbContext CreateDbContext(string[] args)
+
     {
         var optionsBuilder = new DbContextOptionsBuilder<AppDbContext>();
 
@@ -14,4 +15,5 @@ public class AppDbContextFactory : IDesignTimeDbContextFactory<AppDbContext>
 
         return new AppDbContext(optionsBuilder.Options);
     }
+
 }

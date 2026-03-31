@@ -133,6 +133,50 @@ namespace Infrastructure.Migrations
                     b.HasIndex("OwnerId");
 
                     b.ToTable("Hotels", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            Id = new Guid("d72221bf-e4a9-4610-b152-1882ea22fe90"),
+                            Address = "123 Ly Thuong Kiet",
+                            City = "Hà Nội",
+                            CreatedAt = new DateTime(2026, 3, 31, 17, 53, 8, 545, DateTimeKind.Local).AddTicks(6867),
+                            Description = "Khách sạn trung tâm thành phố",
+                            Name = "Grand Central Hotel",
+                            OwnerId = new Guid("eec4b862-8bba-417c-904a-b926c33a7899")
+                        });
+                });
+
+            modelBuilder.Entity("Domain.Entities.HotelImage", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<Guid>("HotelId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("ImageUrl")
+                        .IsRequired()
+                        .HasMaxLength(500)
+                        .HasColumnType("nvarchar(500)");
+
+                    b.Property<bool>("IsThumbnail")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bit")
+                        .HasDefaultValue(false);
+
+                    b.Property<DateTime?>("UpdatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("HotelId");
+
+                    b.ToTable("HotelImages", (string)null);
                 });
 
             modelBuilder.Entity("Domain.Entities.Notification", b =>
@@ -234,6 +278,33 @@ namespace Infrastructure.Migrations
                     b.ToTable("Rooms", (string)null);
                 });
 
+            modelBuilder.Entity("Domain.Entities.RoomImage", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("ImageUrl")
+                        .IsRequired()
+                        .HasMaxLength(500)
+                        .HasColumnType("nvarchar(500)");
+
+                    b.Property<Guid>("RoomId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<DateTime?>("UpdatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("RoomId");
+
+                    b.ToTable("RoomImages", (string)null);
+                });
+
             modelBuilder.Entity("Domain.Entities.RoomType", b =>
                 {
                     b.Property<Guid>("Id")
@@ -308,6 +379,18 @@ namespace Infrastructure.Migrations
                         .IsUnique();
 
                     b.ToTable("Users", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            Id = new Guid("eec4b862-8bba-417c-904a-b926c33a7899"),
+                            CreatedAt = new DateTime(2026, 3, 31, 17, 53, 8, 545, DateTimeKind.Local).AddTicks(6697),
+                            Email = "admin@hotel.com",
+                            FullName = "System Admin",
+                            PasswordHash = "hashed_password",
+                            PhoneNumber = "0869075546",
+                            Role = 1
+                        });
                 });
 
             modelBuilder.Entity("Domain.Entities.Booking", b =>
@@ -359,6 +442,17 @@ namespace Infrastructure.Migrations
                     b.Navigation("Owner");
                 });
 
+            modelBuilder.Entity("Domain.Entities.HotelImage", b =>
+                {
+                    b.HasOne("Domain.Entities.Hotel", "Hotel")
+                        .WithMany("Images")
+                        .HasForeignKey("HotelId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Hotel");
+                });
+
             modelBuilder.Entity("Domain.Entities.Notification", b =>
                 {
                     b.HasOne("Domain.Entities.User", "User")
@@ -400,6 +494,17 @@ namespace Infrastructure.Migrations
                     b.Navigation("RoomType");
                 });
 
+            modelBuilder.Entity("Domain.Entities.RoomImage", b =>
+                {
+                    b.HasOne("Domain.Entities.Room", "Room")
+                        .WithMany("Images")
+                        .HasForeignKey("RoomId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Room");
+                });
+
             modelBuilder.Entity("Domain.Entities.RoomType", b =>
                 {
                     b.HasOne("Domain.Entities.Hotel", "Hotel")
@@ -418,12 +523,16 @@ namespace Infrastructure.Migrations
 
             modelBuilder.Entity("Domain.Entities.Hotel", b =>
                 {
+                    b.Navigation("Images");
+
                     b.Navigation("RoomTypes");
                 });
 
             modelBuilder.Entity("Domain.Entities.Room", b =>
                 {
                     b.Navigation("BookingDetails");
+
+                    b.Navigation("Images");
                 });
 
             modelBuilder.Entity("Domain.Entities.RoomType", b =>

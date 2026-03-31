@@ -22,5 +22,7 @@ namespace Domain.Entities
         public User Owner { get; set; }
 
         public ICollection<RoomType> RoomTypes { get; set; }
+        public ICollection<HotelImage> Images { get; set; } = new List<HotelImage>();
+
     }
 }

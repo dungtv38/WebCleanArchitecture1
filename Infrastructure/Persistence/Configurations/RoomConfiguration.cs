@@ -28,6 +28,10 @@ namespace Infrastructure.Persistence.Configurations
             builder.HasMany(x => x.BookingDetails)
                    .WithOne(bd => bd.Room)
                    .HasForeignKey(bd => bd.RoomId);
+            builder.HasMany(x => x.Images)
+               .WithOne(i => i.Room)
+               .HasForeignKey(i => i.RoomId)
+               .OnDelete(DeleteBehavior.Cascade);
         }
     }
 }
