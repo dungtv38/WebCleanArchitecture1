@@ -1,117 +1,133 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture11\\",
+  "WorkspaceRootPath": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{5872AEB3-BAA3-FE31-B0EB-0FB6DBEDCF83}|Infrastructure\\Infrastructure.csproj|c:\\users\\administrator\\source\\repos\\webcleanarchitecture11\\infrastructure\\services\\hotelservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5872AEB3-BAA3-FE31-B0EB-0FB6DBEDCF83}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\services\\hotelservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5872AEB3-BAA3-FE31-B0EB-0FB6DBEDCF83}|Infrastructure\\Infrastructure.csproj|c:\\users\\administrator\\source\\repos\\webcleanarchitecture11\\infrastructure\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5872AEB3-BAA3-FE31-B0EB-0FB6DBEDCF83}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5872AEB3-BAA3-FE31-B0EB-0FB6DBEDCF83}|Infrastructure\\Infrastructure.csproj|c:\\users\\administrator\\source\\repos\\webcleanarchitecture11\\infrastructure\\services\\jwtservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5872AEB3-BAA3-FE31-B0EB-0FB6DBEDCF83}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\services\\jwtservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F80C4E72-27A0-12B5-0634-DD5C11CFB0C1}|Application\\Application.csproj|c:\\users\\administrator\\source\\repos\\webcleanarchitecture11\\application\\interfaces\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F80C4E72-27A0-12B5-0634-DD5C11CFB0C1}|Application\\Application.csproj|solutionrelative:application\\interfaces\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F80C4E72-27A0-12B5-0634-DD5C11CFB0C1}|Application\\Application.csproj|c:\\users\\administrator\\source\\repos\\webcleanarchitecture11\\application\\dtos\\registerrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F80C4E72-27A0-12B5-0634-DD5C11CFB0C1}|Application\\Application.csproj|solutionrelative:application\\dtos\\registerrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F80C4E72-27A0-12B5-0634-DD5C11CFB0C1}|Application\\Application.csproj|c:\\users\\administrator\\source\\repos\\webcleanarchitecture11\\application\\dtos\\createhotelrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F80C4E72-27A0-12B5-0634-DD5C11CFB0C1}|Application\\Application.csproj|solutionrelative:application\\dtos\\createhotelrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E528BBC3-1C26-8C35-F682-23718816ADCD}|Domain\\Domain.csproj|c:\\users\\administrator\\source\\repos\\webcleanarchitecture11\\domain\\entities\\hotel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E528BBC3-1C26-8C35-F682-23718816ADCD}|Domain\\Domain.csproj|solutionrelative:domain\\entities\\hotel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E528BBC3-1C26-8C35-F682-23718816ADCD}|Domain\\Domain.csproj|c:\\users\\administrator\\source\\repos\\webcleanarchitecture11\\domain\\entities\\userrole.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E528BBC3-1C26-8C35-F682-23718816ADCD}|Domain\\Domain.csproj|solutionrelative:domain\\entities\\userrole.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F80C4E72-27A0-12B5-0634-DD5C11CFB0C1}|Application\\Application.csproj|c:\\users\\administrator\\source\\repos\\webcleanarchitecture11\\application\\dtos\\updatehotelrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F80C4E72-27A0-12B5-0634-DD5C11CFB0C1}|Application\\Application.csproj|solutionrelative:application\\dtos\\updatehotelrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8D6B33C5-CEE1-20B5-A207-99CBB61F699C}|WebAPI\\WebAPI.csproj|c:\\users\\administrator\\source\\repos\\webcleanarchitecture11\\webapi\\controllers\\hotelcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8D6B33C5-CEE1-20B5-A207-99CBB61F699C}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\controllers\\hotelcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F80C4E72-27A0-12B5-0634-DD5C11CFB0C1}|Application\\Application.csproj|c:\\users\\administrator\\source\\repos\\webcleanarchitecture11\\application\\dtos\\authresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F80C4E72-27A0-12B5-0634-DD5C11CFB0C1}|Application\\Application.csproj|solutionrelative:application\\dtos\\authresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F80C4E72-27A0-12B5-0634-DD5C11CFB0C1}|Application\\Application.csproj|c:\\users\\administrator\\source\\repos\\webcleanarchitecture11\\application\\interfaces\\ihotelservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F80C4E72-27A0-12B5-0634-DD5C11CFB0C1}|Application\\Application.csproj|solutionrelative:application\\interfaces\\ihotelservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5872AEB3-BAA3-FE31-B0EB-0FB6DBEDCF83}|Infrastructure\\Infrastructure.csproj|c:\\users\\administrator\\source\\repos\\webcleanarchitecture11\\infrastructure\\persistence\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5872AEB3-BAA3-FE31-B0EB-0FB6DBEDCF83}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\persistence\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5872AEB3-BAA3-FE31-B0EB-0FB6DBEDCF83}|Infrastructure\\Infrastructure.csproj|c:\\users\\administrator\\source\\repos\\webcleanarchitecture11\\infrastructure\\migrations\\20260331105308_seedinitialdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5872AEB3-BAA3-FE31-B0EB-0FB6DBEDCF83}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\migrations\\20260331105308_seedinitialdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5872AEB3-BAA3-FE31-B0EB-0FB6DBEDCF83}|Infrastructure\\Infrastructure.csproj|c:\\users\\administrator\\source\\repos\\webcleanarchitecture11\\infrastructure\\persistence\\appdbcontextfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5872AEB3-BAA3-FE31-B0EB-0FB6DBEDCF83}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\persistence\\appdbcontextfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8D6B33C5-CEE1-20B5-A207-99CBB61F699C}|WebAPI\\WebAPI.csproj|c:\\users\\administrator\\source\\repos\\webcleanarchitecture11\\webapi\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8D6B33C5-CEE1-20B5-A207-99CBB61F699C}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8D6B33C5-CEE1-20B5-A207-99CBB61F699C}|WebAPI\\WebAPI.csproj|c:\\users\\administrator\\source\\repos\\webcleanarchitecture11\\webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{8D6B33C5-CEE1-20B5-A207-99CBB61F699C}|WebAPI\\WebAPI.csproj|c:\\users\\administrator\\source\\repos\\webcleanarchitecture1\\webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8D6B33C5-CEE1-20B5-A207-99CBB61F699C}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E528BBC3-1C26-8C35-F682-23718816ADCD}|Domain\\Domain.csproj|c:\\users\\administrator\\source\\repos\\webcleanarchitecture11\\domain\\entities\\hotelimage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{8D6B33C5-CEE1-20B5-A207-99CBB61F699C}|WebAPI\\WebAPI.csproj|c:\\users\\administrator\\source\\repos\\webcleanarchitecture1\\webapi\\controllers\\roomtypecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8D6B33C5-CEE1-20B5-A207-99CBB61F699C}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\controllers\\roomtypecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5872AEB3-BAA3-FE31-B0EB-0FB6DBEDCF83}|Infrastructure\\Infrastructure.csproj|c:\\users\\administrator\\source\\repos\\webcleanarchitecture1\\infrastructure\\services\\roomtypeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5872AEB3-BAA3-FE31-B0EB-0FB6DBEDCF83}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\services\\roomtypeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F80C4E72-27A0-12B5-0634-DD5C11CFB0C1}|Application\\Application.csproj|c:\\users\\administrator\\source\\repos\\webcleanarchitecture1\\application\\interfaces\\iroomtypeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F80C4E72-27A0-12B5-0634-DD5C11CFB0C1}|Application\\Application.csproj|solutionrelative:application\\interfaces\\iroomtypeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F80C4E72-27A0-12B5-0634-DD5C11CFB0C1}|Application\\Application.csproj|c:\\users\\administrator\\source\\repos\\webcleanarchitecture1\\application\\dtos\\roomtype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F80C4E72-27A0-12B5-0634-DD5C11CFB0C1}|Application\\Application.csproj|solutionrelative:application\\dtos\\roomtype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F80C4E72-27A0-12B5-0634-DD5C11CFB0C1}|Application\\Application.csproj|c:\\users\\administrator\\source\\repos\\webcleanarchitecture1\\application\\dtos\\updatehotelrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F80C4E72-27A0-12B5-0634-DD5C11CFB0C1}|Application\\Application.csproj|solutionrelative:application\\dtos\\updatehotelrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5872AEB3-BAA3-FE31-B0EB-0FB6DBEDCF83}|Infrastructure\\Infrastructure.csproj|c:\\users\\administrator\\source\\repos\\webcleanarchitecture1\\infrastructure\\services\\hotelservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5872AEB3-BAA3-FE31-B0EB-0FB6DBEDCF83}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\services\\hotelservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5872AEB3-BAA3-FE31-B0EB-0FB6DBEDCF83}|Infrastructure\\Infrastructure.csproj|c:\\users\\administrator\\source\\repos\\webcleanarchitecture1\\infrastructure\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5872AEB3-BAA3-FE31-B0EB-0FB6DBEDCF83}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5872AEB3-BAA3-FE31-B0EB-0FB6DBEDCF83}|Infrastructure\\Infrastructure.csproj|c:\\users\\administrator\\source\\repos\\webcleanarchitecture1\\infrastructure\\services\\jwtservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5872AEB3-BAA3-FE31-B0EB-0FB6DBEDCF83}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\services\\jwtservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F80C4E72-27A0-12B5-0634-DD5C11CFB0C1}|Application\\Application.csproj|c:\\users\\administrator\\source\\repos\\webcleanarchitecture1\\application\\interfaces\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F80C4E72-27A0-12B5-0634-DD5C11CFB0C1}|Application\\Application.csproj|solutionrelative:application\\interfaces\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F80C4E72-27A0-12B5-0634-DD5C11CFB0C1}|Application\\Application.csproj|c:\\users\\administrator\\source\\repos\\webcleanarchitecture1\\application\\dtos\\registerrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F80C4E72-27A0-12B5-0634-DD5C11CFB0C1}|Application\\Application.csproj|solutionrelative:application\\dtos\\registerrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F80C4E72-27A0-12B5-0634-DD5C11CFB0C1}|Application\\Application.csproj|c:\\users\\administrator\\source\\repos\\webcleanarchitecture1\\application\\dtos\\createhotelrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F80C4E72-27A0-12B5-0634-DD5C11CFB0C1}|Application\\Application.csproj|solutionrelative:application\\dtos\\createhotelrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E528BBC3-1C26-8C35-F682-23718816ADCD}|Domain\\Domain.csproj|c:\\users\\administrator\\source\\repos\\webcleanarchitecture1\\domain\\entities\\hotel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E528BBC3-1C26-8C35-F682-23718816ADCD}|Domain\\Domain.csproj|solutionrelative:domain\\entities\\hotel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E528BBC3-1C26-8C35-F682-23718816ADCD}|Domain\\Domain.csproj|c:\\users\\administrator\\source\\repos\\webcleanarchitecture1\\domain\\entities\\userrole.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E528BBC3-1C26-8C35-F682-23718816ADCD}|Domain\\Domain.csproj|solutionrelative:domain\\entities\\userrole.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8D6B33C5-CEE1-20B5-A207-99CBB61F699C}|WebAPI\\WebAPI.csproj|c:\\users\\administrator\\source\\repos\\webcleanarchitecture1\\webapi\\controllers\\hotelcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8D6B33C5-CEE1-20B5-A207-99CBB61F699C}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\controllers\\hotelcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F80C4E72-27A0-12B5-0634-DD5C11CFB0C1}|Application\\Application.csproj|c:\\users\\administrator\\source\\repos\\webcleanarchitecture1\\application\\dtos\\authresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F80C4E72-27A0-12B5-0634-DD5C11CFB0C1}|Application\\Application.csproj|solutionrelative:application\\dtos\\authresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F80C4E72-27A0-12B5-0634-DD5C11CFB0C1}|Application\\Application.csproj|c:\\users\\administrator\\source\\repos\\webcleanarchitecture1\\application\\interfaces\\ihotelservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F80C4E72-27A0-12B5-0634-DD5C11CFB0C1}|Application\\Application.csproj|solutionrelative:application\\interfaces\\ihotelservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5872AEB3-BAA3-FE31-B0EB-0FB6DBEDCF83}|Infrastructure\\Infrastructure.csproj|c:\\users\\administrator\\source\\repos\\webcleanarchitecture1\\infrastructure\\persistence\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5872AEB3-BAA3-FE31-B0EB-0FB6DBEDCF83}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\persistence\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5872AEB3-BAA3-FE31-B0EB-0FB6DBEDCF83}|Infrastructure\\Infrastructure.csproj|c:\\users\\administrator\\source\\repos\\webcleanarchitecture1\\infrastructure\\migrations\\20260331105308_seedinitialdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5872AEB3-BAA3-FE31-B0EB-0FB6DBEDCF83}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\migrations\\20260331105308_seedinitialdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5872AEB3-BAA3-FE31-B0EB-0FB6DBEDCF83}|Infrastructure\\Infrastructure.csproj|c:\\users\\administrator\\source\\repos\\webcleanarchitecture1\\infrastructure\\persistence\\appdbcontextfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5872AEB3-BAA3-FE31-B0EB-0FB6DBEDCF83}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\persistence\\appdbcontextfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8D6B33C5-CEE1-20B5-A207-99CBB61F699C}|WebAPI\\WebAPI.csproj|c:\\users\\administrator\\source\\repos\\webcleanarchitecture1\\webapi\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8D6B33C5-CEE1-20B5-A207-99CBB61F699C}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E528BBC3-1C26-8C35-F682-23718816ADCD}|Domain\\Domain.csproj|c:\\users\\administrator\\source\\repos\\webcleanarchitecture1\\domain\\entities\\hotelimage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E528BBC3-1C26-8C35-F682-23718816ADCD}|Domain\\Domain.csproj|solutionrelative:domain\\entities\\hotelimage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5872AEB3-BAA3-FE31-B0EB-0FB6DBEDCF83}|Infrastructure\\Infrastructure.csproj|c:\\users\\administrator\\source\\repos\\webcleanarchitecture11\\infrastructure\\persistence\\configurations\\roomimageconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{5872AEB3-BAA3-FE31-B0EB-0FB6DBEDCF83}|Infrastructure\\Infrastructure.csproj|c:\\users\\administrator\\source\\repos\\webcleanarchitecture1\\infrastructure\\persistence\\configurations\\roomimageconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5872AEB3-BAA3-FE31-B0EB-0FB6DBEDCF83}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\persistence\\configurations\\roomimageconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5872AEB3-BAA3-FE31-B0EB-0FB6DBEDCF83}|Infrastructure\\Infrastructure.csproj|c:\\users\\administrator\\source\\repos\\webcleanarchitecture11\\infrastructure\\persistence\\configurations\\roomconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{5872AEB3-BAA3-FE31-B0EB-0FB6DBEDCF83}|Infrastructure\\Infrastructure.csproj|c:\\users\\administrator\\source\\repos\\webcleanarchitecture1\\infrastructure\\persistence\\configurations\\roomconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5872AEB3-BAA3-FE31-B0EB-0FB6DBEDCF83}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\persistence\\configurations\\roomconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E528BBC3-1C26-8C35-F682-23718816ADCD}|Domain\\Domain.csproj|c:\\users\\administrator\\source\\repos\\webcleanarchitecture11\\domain\\entities\\room.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{E528BBC3-1C26-8C35-F682-23718816ADCD}|Domain\\Domain.csproj|c:\\users\\administrator\\source\\repos\\webcleanarchitecture1\\domain\\entities\\room.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E528BBC3-1C26-8C35-F682-23718816ADCD}|Domain\\Domain.csproj|solutionrelative:domain\\entities\\room.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E528BBC3-1C26-8C35-F682-23718816ADCD}|Domain\\Domain.csproj|c:\\users\\administrator\\source\\repos\\webcleanarchitecture11\\domain\\entities\\roomimage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{E528BBC3-1C26-8C35-F682-23718816ADCD}|Domain\\Domain.csproj|c:\\users\\administrator\\source\\repos\\webcleanarchitecture1\\domain\\entities\\roomimage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E528BBC3-1C26-8C35-F682-23718816ADCD}|Domain\\Domain.csproj|solutionrelative:domain\\entities\\roomimage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E528BBC3-1C26-8C35-F682-23718816ADCD}|Domain\\Domain.csproj|c:\\users\\administrator\\source\\repos\\webcleanarchitecture11\\domain\\entities\\notification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{E528BBC3-1C26-8C35-F682-23718816ADCD}|Domain\\Domain.csproj|c:\\users\\administrator\\source\\repos\\webcleanarchitecture1\\domain\\entities\\notification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E528BBC3-1C26-8C35-F682-23718816ADCD}|Domain\\Domain.csproj|solutionrelative:domain\\entities\\notification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E528BBC3-1C26-8C35-F682-23718816ADCD}|Domain\\Domain.csproj|c:\\users\\administrator\\source\\repos\\webcleanarchitecture11\\domain\\entities\\roomtype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{E528BBC3-1C26-8C35-F682-23718816ADCD}|Domain\\Domain.csproj|c:\\users\\administrator\\source\\repos\\webcleanarchitecture1\\domain\\entities\\roomtype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E528BBC3-1C26-8C35-F682-23718816ADCD}|Domain\\Domain.csproj|solutionrelative:domain\\entities\\roomtype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5872AEB3-BAA3-FE31-B0EB-0FB6DBEDCF83}|Infrastructure\\Infrastructure.csproj|c:\\users\\administrator\\source\\repos\\webcleanarchitecture11\\infrastructure\\persistence\\configurations\\hotelimageconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{5872AEB3-BAA3-FE31-B0EB-0FB6DBEDCF83}|Infrastructure\\Infrastructure.csproj|c:\\users\\administrator\\source\\repos\\webcleanarchitecture1\\infrastructure\\persistence\\configurations\\hotelimageconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5872AEB3-BAA3-FE31-B0EB-0FB6DBEDCF83}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\persistence\\configurations\\hotelimageconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5872AEB3-BAA3-FE31-B0EB-0FB6DBEDCF83}|Infrastructure\\Infrastructure.csproj|c:\\users\\administrator\\source\\repos\\webcleanarchitecture11\\infrastructure\\persistence\\configurations\\hotelconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{5872AEB3-BAA3-FE31-B0EB-0FB6DBEDCF83}|Infrastructure\\Infrastructure.csproj|c:\\users\\administrator\\source\\repos\\webcleanarchitecture1\\infrastructure\\persistence\\configurations\\hotelconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5872AEB3-BAA3-FE31-B0EB-0FB6DBEDCF83}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\persistence\\configurations\\hotelconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8D6B33C5-CEE1-20B5-A207-99CBB61F699C}|WebAPI\\WebAPI.csproj|c:\\users\\administrator\\source\\repos\\webcleanarchitecture11\\webapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "AbsoluteMoniker": "D:0:0:{8D6B33C5-CEE1-20B5-A207-99CBB61F699C}|WebAPI\\WebAPI.csproj|c:\\users\\administrator\\source\\repos\\webcleanarchitecture1\\webapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{8D6B33C5-CEE1-20B5-A207-99CBB61F699C}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5872AEB3-BAA3-FE31-B0EB-0FB6DBEDCF83}|Infrastructure\\Infrastructure.csproj|c:\\users\\administrator\\source\\repos\\webcleanarchitecture11\\infrastructure\\migrations\\20260331102217_addimagetables.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{5872AEB3-BAA3-FE31-B0EB-0FB6DBEDCF83}|Infrastructure\\Infrastructure.csproj|c:\\users\\administrator\\source\\repos\\webcleanarchitecture1\\infrastructure\\migrations\\20260331102217_addimagetables.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5872AEB3-BAA3-FE31-B0EB-0FB6DBEDCF83}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\migrations\\20260331102217_addimagetables.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -122,27 +138,128 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "CreateHotelRequest.cs",
-              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture11\\Application\\DTOs\\CreateHotelRequest.cs",
-              "RelativeDocumentMoniker": "Application\\DTOs\\CreateHotelRequest.cs",
-              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture11\\Application\\DTOs\\CreateHotelRequest.cs",
-              "RelativeToolTip": "Application\\DTOs\\CreateHotelRequest.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "RoomTypeController.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture1\\WebAPI\\Controllers\\RoomTypeController.cs",
+              "RelativeDocumentMoniker": "WebAPI\\Controllers\\RoomTypeController.cs",
+              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture1\\WebAPI\\Controllers\\RoomTypeController.cs",
+              "RelativeToolTip": "WebAPI\\Controllers\\RoomTypeController.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABIAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-31T10:25:21.858Z"
+              "WhenOpened": "2026-04-01T05:43:12.965Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 2,
+              "Title": "RoomTypeService.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture1\\Infrastructure\\Services\\RoomTypeService.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Services\\RoomTypeService.cs",
+              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture1\\Infrastructure\\Services\\RoomTypeService.cs",
+              "RelativeToolTip": "Infrastructure\\Services\\RoomTypeService.cs",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAowEAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-01T05:35:46.791Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "IRoomTypeService.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture1\\Application\\Interfaces\\IRoomTypeService.cs",
+              "RelativeDocumentMoniker": "Application\\Interfaces\\IRoomTypeService.cs",
+              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture1\\Application\\Interfaces\\IRoomTypeService.cs",
+              "RelativeToolTip": "Application\\Interfaces\\IRoomTypeService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-01T05:34:45.392Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "RoomType.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture1\\Application\\DTOs\\RoomType.cs",
+              "RelativeDocumentMoniker": "Application\\DTOs\\RoomType.cs",
+              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture1\\Application\\DTOs\\RoomType.cs",
+              "RelativeToolTip": "Application\\DTOs\\RoomType.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAsAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-01T05:29:34.006Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture1\\Infrastructure\\Persistence\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Persistence\\AppDbContext.cs",
+              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture1\\Infrastructure\\Persistence\\AppDbContext.cs",
+              "RelativeToolTip": "Infrastructure\\Persistence\\AppDbContext.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAA5wCQAAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-31T10:13:02.903Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "AuthService.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture1\\Infrastructure\\Services\\AuthService.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Services\\AuthService.cs",
+              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture1\\Infrastructure\\Services\\AuthService.cs",
+              "RelativeToolTip": "Infrastructure\\Services\\AuthService.cs",
+              "ViewState": "AgIAACQAAAAAAAAAAAAowDsAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-31T09:53:04.71Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "HotelController.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture1\\WebAPI\\Controllers\\HotelController.cs",
+              "RelativeDocumentMoniker": "WebAPI\\Controllers\\HotelController.cs",
+              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture1\\WebAPI\\Controllers\\HotelController.cs",
+              "RelativeToolTip": "WebAPI\\Controllers\\HotelController.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAYwCoAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-31T10:33:26.872Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "UserRole.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture1\\Domain\\Entities\\UserRole.cs",
+              "RelativeDocumentMoniker": "Domain\\Entities\\UserRole.cs",
+              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture1\\Domain\\Entities\\UserRole.cs",
+              "RelativeToolTip": "Domain\\Entities\\UserRole.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-31T10:44:10.684Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture1\\WebAPI\\Program.cs",
+              "RelativeDocumentMoniker": "WebAPI\\Program.cs",
+              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture1\\WebAPI\\Program.cs",
+              "RelativeToolTip": "WebAPI\\Program.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABoAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-31T09:52:02.007Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
               "Title": "AuthController.cs",
-              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture11\\WebAPI\\Controllers\\AuthController.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture1\\WebAPI\\Controllers\\AuthController.cs",
               "RelativeDocumentMoniker": "WebAPI\\Controllers\\AuthController.cs",
-              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture11\\WebAPI\\Controllers\\AuthController.cs",
+              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture1\\WebAPI\\Controllers\\AuthController.cs",
               "RelativeToolTip": "WebAPI\\Controllers\\AuthController.cs",
               "ViewState": "AgIAAAgAAAAAAAAAAAAxwBgAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -151,58 +268,10 @@
             {
               "$type": "Document",
               "DocumentIndex": 12,
-              "Title": "AppDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture11\\Infrastructure\\Persistence\\AppDbContext.cs",
-              "RelativeDocumentMoniker": "Infrastructure\\Persistence\\AppDbContext.cs",
-              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture11\\Infrastructure\\Persistence\\AppDbContext.cs",
-              "RelativeToolTip": "Infrastructure\\Persistence\\AppDbContext.cs",
-              "ViewState": "AgIAABYAAAAAAAAAAAA5wCQAAAA4AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-31T10:13:02.903Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "AuthService.cs",
-              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture11\\Infrastructure\\Services\\AuthService.cs",
-              "RelativeDocumentMoniker": "Infrastructure\\Services\\AuthService.cs",
-              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture11\\Infrastructure\\Services\\AuthService.cs",
-              "RelativeToolTip": "Infrastructure\\Services\\AuthService.cs",
-              "ViewState": "AgIAACQAAAAAAAAAAAAowDsAAAAlAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-31T09:53:04.71Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "HotelController.cs",
-              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture11\\WebAPI\\Controllers\\HotelController.cs",
-              "RelativeDocumentMoniker": "WebAPI\\Controllers\\HotelController.cs",
-              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture11\\WebAPI\\Controllers\\HotelController.cs",
-              "RelativeToolTip": "WebAPI\\Controllers\\HotelController.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAYwCoAAAAoAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-31T10:33:26.872Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "UserRole.cs",
-              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture11\\Domain\\Entities\\UserRole.cs",
-              "RelativeDocumentMoniker": "Domain\\Entities\\UserRole.cs",
-              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture11\\Domain\\Entities\\UserRole.cs",
-              "RelativeToolTip": "Domain\\Entities\\UserRole.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-31T10:44:10.684Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
               "Title": "Hotel.cs",
-              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture11\\Domain\\Entities\\Hotel.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture1\\Domain\\Entities\\Hotel.cs",
               "RelativeDocumentMoniker": "Domain\\Entities\\Hotel.cs",
-              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture11\\Domain\\Entities\\Hotel.cs",
+              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture1\\Domain\\Entities\\Hotel.cs",
               "RelativeToolTip": "Domain\\Entities\\Hotel.cs",
               "ViewState": "AgIAAAsAAAAAAAAAAAAQwBgAAABVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -210,11 +279,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 9,
               "Title": "IAuthService.cs",
-              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture11\\Application\\Interfaces\\IAuthService.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture1\\Application\\Interfaces\\IAuthService.cs",
               "RelativeDocumentMoniker": "Application\\Interfaces\\IAuthService.cs",
-              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture11\\Application\\Interfaces\\IAuthService.cs",
+              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture1\\Application\\Interfaces\\IAuthService.cs",
               "RelativeToolTip": "Application\\Interfaces\\IAuthService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -222,11 +291,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 8,
               "Title": "JwtService.cs",
-              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture11\\Infrastructure\\Services\\JwtService.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture1\\Infrastructure\\Services\\JwtService.cs",
               "RelativeDocumentMoniker": "Infrastructure\\Services\\JwtService.cs",
-              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture11\\Infrastructure\\Services\\JwtService.cs",
+              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture1\\Infrastructure\\Services\\JwtService.cs",
               "RelativeToolTip": "Infrastructure\\Services\\JwtService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACkAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -234,11 +303,36 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 5,
+              "Title": "UpdateHotelRequest.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture1\\Application\\DTOs\\UpdateHotelRequest.cs",
+              "RelativeDocumentMoniker": "Application\\DTOs\\UpdateHotelRequest.cs",
+              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture1\\Application\\DTOs\\UpdateHotelRequest.cs",
+              "RelativeToolTip": "Application\\DTOs\\UpdateHotelRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-31T11:02:32.268Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "CreateHotelRequest.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture1\\Application\\DTOs\\CreateHotelRequest.cs",
+              "RelativeDocumentMoniker": "Application\\DTOs\\CreateHotelRequest.cs",
+              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture1\\Application\\DTOs\\CreateHotelRequest.cs",
+              "RelativeToolTip": "Application\\DTOs\\CreateHotelRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-31T10:25:21.858Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "HotelService.cs",
-              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture11\\Infrastructure\\Services\\HotelService.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture1\\Infrastructure\\Services\\HotelService.cs",
               "RelativeDocumentMoniker": "Infrastructure\\Services\\HotelService.cs",
-              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture11\\Infrastructure\\Services\\HotelService.cs",
+              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture1\\Infrastructure\\Services\\HotelService.cs",
               "RelativeToolTip": "Infrastructure\\Services\\HotelService.cs",
               "ViewState": "AgIAAAwAAAAAAAAAAAAgwBIAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -247,11 +341,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 10,
               "Title": "RegisterRequest.cs",
-              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture11\\Application\\DTOs\\RegisterRequest.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture1\\Application\\DTOs\\RegisterRequest.cs",
               "RelativeDocumentMoniker": "Application\\DTOs\\RegisterRequest.cs",
-              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture11\\Application\\DTOs\\RegisterRequest.cs",
+              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture1\\Application\\DTOs\\RegisterRequest.cs",
               "RelativeToolTip": "Application\\DTOs\\RegisterRequest.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -259,11 +353,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 16,
               "Title": "IHotelService.cs",
-              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture11\\Application\\Interfaces\\IHotelService.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture1\\Application\\Interfaces\\IHotelService.cs",
               "RelativeDocumentMoniker": "Application\\Interfaces\\IHotelService.cs",
-              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture11\\Application\\Interfaces\\IHotelService.cs",
+              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture1\\Application\\Interfaces\\IHotelService.cs",
               "RelativeToolTip": "Application\\Interfaces\\IHotelService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAqwA4AAAA6AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -271,23 +365,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "UpdateHotelRequest.cs",
-              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture11\\Application\\DTOs\\UpdateHotelRequest.cs",
-              "RelativeDocumentMoniker": "Application\\DTOs\\UpdateHotelRequest.cs",
-              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture11\\Application\\DTOs\\UpdateHotelRequest.cs",
-              "RelativeToolTip": "Application\\DTOs\\UpdateHotelRequest.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAA3AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-31T11:02:32.268Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 15,
               "Title": "AuthResponse.cs",
-              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture11\\Application\\DTOs\\AuthResponse.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture1\\Application\\DTOs\\AuthResponse.cs",
               "RelativeDocumentMoniker": "Application\\DTOs\\AuthResponse.cs",
-              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture11\\Application\\DTOs\\AuthResponse.cs",
+              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture1\\Application\\DTOs\\AuthResponse.cs",
               "RelativeToolTip": "Application\\DTOs\\AuthResponse.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -295,11 +377,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 18,
               "Title": "20260331105308_SeedInitialData.cs",
-              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture11\\Infrastructure\\Migrations\\20260331105308_SeedInitialData.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture1\\Infrastructure\\Migrations\\20260331105308_SeedInitialData.cs",
               "RelativeDocumentMoniker": "Infrastructure\\Migrations\\20260331105308_SeedInitialData.cs",
-              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture11\\Infrastructure\\Migrations\\20260331105308_SeedInitialData.cs",
+              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture1\\Infrastructure\\Migrations\\20260331105308_SeedInitialData.cs",
               "RelativeToolTip": "Infrastructure\\Migrations\\20260331105308_SeedInitialData.cs",
               "ViewState": "AgIAABAAAAAAAAAAAAAgwBMAAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -307,11 +389,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 22,
               "Title": "RoomImageConfiguration.cs",
-              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture11\\Infrastructure\\Persistence\\Configurations\\RoomImageConfiguration.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture1\\Infrastructure\\Persistence\\Configurations\\RoomImageConfiguration.cs",
               "RelativeDocumentMoniker": "Infrastructure\\Persistence\\Configurations\\RoomImageConfiguration.cs",
-              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture11\\Infrastructure\\Persistence\\Configurations\\RoomImageConfiguration.cs",
+              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture1\\Infrastructure\\Persistence\\Configurations\\RoomImageConfiguration.cs",
               "RelativeToolTip": "Infrastructure\\Persistence\\Configurations\\RoomImageConfiguration.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -319,11 +401,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 19,
               "Title": "AppDbContextFactory.cs",
-              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture11\\Infrastructure\\Persistence\\AppDbContextFactory.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture1\\Infrastructure\\Persistence\\AppDbContextFactory.cs",
               "RelativeDocumentMoniker": "Infrastructure\\Persistence\\AppDbContextFactory.cs",
-              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture11\\Infrastructure\\Persistence\\AppDbContextFactory.cs",
+              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture1\\Infrastructure\\Persistence\\AppDbContextFactory.cs",
               "RelativeToolTip": "Infrastructure\\Persistence\\AppDbContextFactory.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -331,11 +413,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 31,
               "Title": "20260331102217_AddImageTables.cs",
-              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture11\\Infrastructure\\Migrations\\20260331102217_AddImageTables.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture1\\Infrastructure\\Migrations\\20260331102217_AddImageTables.cs",
               "RelativeDocumentMoniker": "Infrastructure\\Migrations\\20260331102217_AddImageTables.cs",
-              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture11\\Infrastructure\\Migrations\\20260331102217_AddImageTables.cs",
+              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture1\\Infrastructure\\Migrations\\20260331102217_AddImageTables.cs",
               "RelativeToolTip": "Infrastructure\\Migrations\\20260331102217_AddImageTables.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAABCAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -343,11 +425,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 23,
               "Title": "RoomConfiguration.cs",
-              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture11\\Infrastructure\\Persistence\\Configurations\\RoomConfiguration.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture1\\Infrastructure\\Persistence\\Configurations\\RoomConfiguration.cs",
               "RelativeDocumentMoniker": "Infrastructure\\Persistence\\Configurations\\RoomConfiguration.cs",
-              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture11\\Infrastructure\\Persistence\\Configurations\\RoomConfiguration.cs",
+              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture1\\Infrastructure\\Persistence\\Configurations\\RoomConfiguration.cs",
               "RelativeToolTip": "Infrastructure\\Persistence\\Configurations\\RoomConfiguration.cs",
               "ViewState": "AgIAABAAAAAAAAAAAAAgwCEAAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -355,23 +437,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture11\\WebAPI\\Program.cs",
-              "RelativeDocumentMoniker": "WebAPI\\Program.cs",
-              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture11\\WebAPI\\Program.cs",
-              "RelativeToolTip": "WebAPI\\Program.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABUAAAA2AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-31T09:52:02.007Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 26,
               "Title": "Notification.cs",
-              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture11\\Domain\\Entities\\Notification.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture1\\Domain\\Entities\\Notification.cs",
               "RelativeDocumentMoniker": "Domain\\Entities\\Notification.cs",
-              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture11\\Domain\\Entities\\Notification.cs",
+              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture1\\Domain\\Entities\\Notification.cs",
               "RelativeToolTip": "Domain\\Entities\\Notification.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -379,11 +449,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 28,
               "Title": "HotelImageConfiguration.cs",
-              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture11\\Infrastructure\\Persistence\\Configurations\\HotelImageConfiguration.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture1\\Infrastructure\\Persistence\\Configurations\\HotelImageConfiguration.cs",
               "RelativeDocumentMoniker": "Infrastructure\\Persistence\\Configurations\\HotelImageConfiguration.cs",
-              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture11\\Infrastructure\\Persistence\\Configurations\\HotelImageConfiguration.cs",
+              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture1\\Infrastructure\\Persistence\\Configurations\\HotelImageConfiguration.cs",
               "RelativeToolTip": "Infrastructure\\Persistence\\Configurations\\HotelImageConfiguration.cs",
               "ViewState": "AgIAAA0AAAAAAAAAAAA1wBoAAAALAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -391,11 +461,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 24,
               "Title": "Room.cs",
-              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture11\\Domain\\Entities\\Room.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture1\\Domain\\Entities\\Room.cs",
               "RelativeDocumentMoniker": "Domain\\Entities\\Room.cs",
-              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture11\\Domain\\Entities\\Room.cs",
+              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture1\\Domain\\Entities\\Room.cs",
               "RelativeToolTip": "Domain\\Entities\\Room.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -403,11 +473,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 27,
               "Title": "RoomType.cs",
-              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture11\\Domain\\Entities\\RoomType.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture1\\Domain\\Entities\\RoomType.cs",
               "RelativeDocumentMoniker": "Domain\\Entities\\RoomType.cs",
-              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture11\\Domain\\Entities\\RoomType.cs",
+              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture1\\Domain\\Entities\\RoomType.cs",
               "RelativeToolTip": "Domain\\Entities\\RoomType.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAABEAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -415,11 +485,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 21,
               "Title": "HotelImage.cs",
-              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture11\\Domain\\Entities\\HotelImage.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture1\\Domain\\Entities\\HotelImage.cs",
               "RelativeDocumentMoniker": "Domain\\Entities\\HotelImage.cs",
-              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture11\\Domain\\Entities\\HotelImage.cs",
+              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture1\\Domain\\Entities\\HotelImage.cs",
               "RelativeToolTip": "Domain\\Entities\\HotelImage.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -427,11 +497,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 29,
               "Title": "HotelConfiguration.cs",
-              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture11\\Infrastructure\\Persistence\\Configurations\\HotelConfiguration.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture1\\Infrastructure\\Persistence\\Configurations\\HotelConfiguration.cs",
               "RelativeDocumentMoniker": "Infrastructure\\Persistence\\Configurations\\HotelConfiguration.cs",
-              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture11\\Infrastructure\\Persistence\\Configurations\\HotelConfiguration.cs",
+              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture1\\Infrastructure\\Persistence\\Configurations\\HotelConfiguration.cs",
               "RelativeToolTip": "Infrastructure\\Persistence\\Configurations\\HotelConfiguration.cs",
               "ViewState": "AgIAABUAAAAAAAAAAAAAACUAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -439,11 +509,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 25,
               "Title": "RoomImage.cs",
-              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture11\\Domain\\Entities\\RoomImage.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture1\\Domain\\Entities\\RoomImage.cs",
               "RelativeDocumentMoniker": "Domain\\Entities\\RoomImage.cs",
-              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture11\\Domain\\Entities\\RoomImage.cs",
+              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture1\\Domain\\Entities\\RoomImage.cs",
               "RelativeToolTip": "Domain\\Entities\\RoomImage.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -451,15 +521,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 30,
               "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture11\\WebAPI\\appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture1\\WebAPI\\appsettings.json",
               "RelativeDocumentMoniker": "WebAPI\\appsettings.json",
-              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture11\\WebAPI\\appsettings.json",
+              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture1\\WebAPI\\appsettings.json",
               "RelativeToolTip": "WebAPI\\appsettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
               "WhenOpened": "2026-03-31T09:48:19.162Z"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
             }
           ]
         }

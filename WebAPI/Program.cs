@@ -20,6 +20,7 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 // Đăng ký các Service của bạn
 builder.Services.AddScoped<IAuthService, AuthService>();
 builder.Services.AddScoped<IHotelService, HotelService>();
+builder.Services.AddScoped<IRoomTypeService, RoomTypeService>();
 builder.Services.AddScoped<JwtService>(); 
 // Cấu hình Authentication (DI chuyển lên trước app.Build)
 var key = Encoding.UTF8.GetBytes(builder.Configuration["Jwt:Key"]!);
