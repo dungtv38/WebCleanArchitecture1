@@ -140,7 +140,7 @@ namespace Infrastructure.Migrations
                             Id = new Guid("d72221bf-e4a9-4610-b152-1882ea22fe90"),
                             Address = "123 Ly Thuong Kiet",
                             City = "Hà Nội",
-                            CreatedAt = new DateTime(2026, 3, 31, 17, 53, 8, 545, DateTimeKind.Local).AddTicks(6867),
+                            CreatedAt = new DateTime(2026, 4, 2, 12, 43, 50, 967, DateTimeKind.Local).AddTicks(6789),
                             Description = "Khách sạn trung tâm thành phố",
                             Name = "Grand Central Hotel",
                             OwnerId = new Guid("eec4b862-8bba-417c-904a-b926c33a7899")
@@ -260,6 +260,10 @@ namespace Infrastructure.Migrations
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("datetime2");
 
+                    b.Property<string>("Note")
+                        .HasMaxLength(500)
+                        .HasColumnType("nvarchar(500)");
+
                     b.Property<string>("RoomNumber")
                         .IsRequired()
                         .HasMaxLength(50)
@@ -268,12 +272,18 @@ namespace Infrastructure.Migrations
                     b.Property<Guid>("RoomTypeId")
                         .HasColumnType("uniqueidentifier");
 
+                    b.Property<int>("Status")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasDefaultValue(0);
+
                     b.Property<DateTime?>("UpdatedAt")
                         .HasColumnType("datetime2");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("RoomTypeId");
+                    b.HasIndex("RoomTypeId", "RoomNumber")
+                        .IsUnique();
 
                     b.ToTable("Rooms", (string)null);
                 });
@@ -384,7 +394,7 @@ namespace Infrastructure.Migrations
                         new
                         {
                             Id = new Guid("eec4b862-8bba-417c-904a-b926c33a7899"),
-                            CreatedAt = new DateTime(2026, 3, 31, 17, 53, 8, 545, DateTimeKind.Local).AddTicks(6697),
+                            CreatedAt = new DateTime(2026, 4, 2, 12, 43, 50, 967, DateTimeKind.Local).AddTicks(6653),
                             Email = "admin@hotel.com",
                             FullName = "System Admin",
                             PasswordHash = "hashed_password",
