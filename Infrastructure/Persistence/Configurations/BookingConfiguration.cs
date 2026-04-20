@@ -1,11 +1,7 @@
 ﻿using Domain.Entities;
+
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Infrastructure.Persistence.Configurations
 {
@@ -18,13 +14,16 @@ namespace Infrastructure.Persistence.Configurations
             builder.HasKey(x => x.Id);
 
             builder.Property(x => x.TotalAmount)
-                   .HasPrecision(18, 2);
-
-            builder.Property(x => x.CheckInDate)
+                   .HasPrecision(18, 2)
                    .IsRequired();
 
-            builder.Property(x => x.CheckOutDate)
+            builder.Property(x => x.CheckIn)
                    .IsRequired();
+
+            builder.Property(x => x.CheckOut);
+
+            builder.Property(x => x.Status)
+                   .HasConversion<int>();   // lưu dạng int
 
             builder.HasOne(x => x.User)
                    .WithMany(u => u.Bookings)
@@ -36,9 +35,14 @@ namespace Infrastructure.Persistence.Configurations
                    .HasForeignKey(x => x.HotelId)
                    .OnDelete(DeleteBehavior.Restrict);
 
+   
             builder.HasMany(x => x.BookingDetails)
                    .WithOne(d => d.Booking)
-                   .HasForeignKey(d => d.BookingId);
+                   .HasForeignKey(d => d.BookingId)
+                   .OnDelete(DeleteBehavior.Cascade);
+            builder.HasIndex(x => new { x.HotelId, x.CheckIn, x.CheckOut });
+
+            builder.HasIndex(x => x.UserId);
         }
     }
 }

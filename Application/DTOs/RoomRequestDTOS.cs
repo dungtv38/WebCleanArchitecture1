@@ -12,7 +12,15 @@ namespace Application.DTOs
         public Guid RoomTypeId { get; set; }
         public string RoomNumber { get; set; } = default!;
         public string? Note { get; set; }
-        // Bạn có thể thêm list ảnh demo ở đây nếu muốn
+   
+        public List<string>? ImageUrls { get; set; }
+    }
+    public class UpdateRoomRequest
+    {
+        public string RoomNumber { get; set; } = default!;
+        public string? Note { get; set; }
+
+        // Danh sách ảnh mới (giữ lại)
         public List<string>? ImageUrls { get; set; }
     }
 

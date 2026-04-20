@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Infrastructure.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20260402054351_updateroom")]
-    partial class updateroom
+    [Migration("20260420103600_UpdateBookingConfig")]
+    partial class UpdateBookingConfig
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -31,10 +31,10 @@ namespace Infrastructure.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<DateTime>("CheckInDate")
+                    b.Property<DateTime>("CheckIn")
                         .HasColumnType("datetime2");
 
-                    b.Property<DateTime>("CheckOutDate")
+                    b.Property<DateTime>("CheckOut")
                         .HasColumnType("datetime2");
 
                     b.Property<DateTime>("CreatedAt")
@@ -42,6 +42,9 @@ namespace Infrastructure.Migrations
 
                     b.Property<Guid>("HotelId")
                         .HasColumnType("uniqueidentifier");
+
+                    b.Property<int>("Status")
+                        .HasColumnType("int");
 
                     b.Property<decimal>("TotalAmount")
                         .HasPrecision(18, 2)
@@ -55,9 +58,9 @@ namespace Infrastructure.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("HotelId");
-
                     b.HasIndex("UserId");
+
+                    b.HasIndex("HotelId", "CheckIn", "CheckOut");
 
                     b.ToTable("Bookings", (string)null);
                 });
@@ -143,7 +146,7 @@ namespace Infrastructure.Migrations
                             Id = new Guid("d72221bf-e4a9-4610-b152-1882ea22fe90"),
                             Address = "123 Ly Thuong Kiet",
                             City = "Hà Nội",
-                            CreatedAt = new DateTime(2026, 4, 2, 12, 43, 50, 967, DateTimeKind.Local).AddTicks(6789),
+                            CreatedAt = new DateTime(2026, 4, 20, 17, 36, 0, 134, DateTimeKind.Local).AddTicks(4490),
                             Description = "Khách sạn trung tâm thành phố",
                             Name = "Grand Central Hotel",
                             OwnerId = new Guid("eec4b862-8bba-417c-904a-b926c33a7899")
@@ -397,7 +400,7 @@ namespace Infrastructure.Migrations
                         new
                         {
                             Id = new Guid("eec4b862-8bba-417c-904a-b926c33a7899"),
-                            CreatedAt = new DateTime(2026, 4, 2, 12, 43, 50, 967, DateTimeKind.Local).AddTicks(6653),
+                            CreatedAt = new DateTime(2026, 4, 20, 17, 36, 0, 134, DateTimeKind.Local).AddTicks(4358),
                             Email = "admin@hotel.com",
                             FullName = "System Admin",
                             PasswordHash = "hashed_password",

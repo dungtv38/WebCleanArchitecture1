@@ -13,16 +13,25 @@ namespace Domain.Entities
 
         public Guid HotelId { get; set; }
 
-        public DateTime CheckInDate { get; set; }
+        public DateTime CheckIn { get; set; }
 
-        public DateTime CheckOutDate { get; set; }
+        public DateTime CheckOut { get; set; }
 
         public decimal TotalAmount { get; set; }
 
-        public User User { get; set; }
+        public BookingStatus Status { get; set; } = BookingStatus.Pending;
 
-        public Hotel Hotel { get; set; }
+        // Navigation
+        public User User { get; set; } = default!;
 
-        public ICollection<BookingDetail> BookingDetails { get; set; }
+        public Hotel Hotel { get; set; } = default!;
+
+        public ICollection<BookingDetail> BookingDetails { get; set; } = new List<BookingDetail>();
+    }
+    public enum BookingStatus
+    {
+        Pending = 0,
+        Confirmed = 1,
+        Cancelled = 2
     }
 }
