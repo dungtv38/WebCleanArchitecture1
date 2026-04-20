@@ -17,7 +17,7 @@ namespace Infrastructure.Services
         private readonly AppDbContext _context;
         public RoomService(AppDbContext context) => _context = context;
 
-        public async Task<Room> CreateAsync(CreateRoomRequest request)
+        public async Task<RoomResponse> CreateAsync(CreateRoomRequest request)
         {
             var roomTypeExists = await _context.RoomTypes
              .AnyAsync(x => x.Id == request.RoomTypeId);
@@ -63,7 +63,15 @@ namespace Infrastructure.Services
             _context.Rooms.Add(room);
             await _context.SaveChangesAsync();
 
-            return room;
+            return new RoomResponse
+            {
+                Id = room.Id,
+                RoomTypeId = room.RoomTypeId,
+                RoomNumber = room.RoomNumber,
+                Note = room.Note,
+                Status = room.Status.ToString(),
+                Images = room.Images.Select(i => i.ImageUrl).ToList()
+            };
         }
 
         public async Task<bool> DeleteAsync(Guid roomId)

@@ -24,33 +24,42 @@ namespace Infrastructure.Services
         {
             if (request.CheckIn.Date < DateTime.UtcNow.Date)
                 throw new Exception("Ngày nhận phòng không hợp lệ.");
+
             if (request.CheckIn >= request.CheckOut)
                 throw new Exception("Ngày trả phòng phải sau ngày nhận phòng.");
 
             int totalNights = (request.CheckOut.Date - request.CheckIn.Date).Days;
 
+            if (totalNights <= 0)
+                throw new Exception("Số đêm không hợp lệ.");
+
             using var transaction = await _context.Database.BeginTransactionAsync();
+
             try
             {
-                // 2. Thuật toán kiểm tra phòng trống (Overlap Check)
+                // 1. Check phòng trùng (fix tránh null navigation)
                 var occupiedRoomIds = await _context.BookingDetails
-                    .Where(bd => request.RoomIds.Contains(bd.RoomId) &&
-                                 bd.Booking.Status != BookingStatus.Cancelled &&
-                                 bd.Booking.CheckIn < request.CheckOut &&
-                                 bd.Booking.CheckOut > request.CheckIn)
+                    .Where(bd =>
+                        request.RoomIds.Contains(bd.RoomId) &&
+                        bd.Booking.Status != BookingStatus.Cancelled &&
+                        bd.Booking.CheckIn < request.CheckOut &&
+                        bd.Booking.CheckOut > request.CheckIn)
                     .Select(bd => bd.RoomId)
                     .ToListAsync();
 
                 if (occupiedRoomIds.Any())
                     throw new Exception("Một số phòng bạn chọn đã được đặt trong thời gian này.");
 
-                // 3. Lấy thông tin phòng và giá
+                // 2. Load rooms
                 var rooms = await _context.Rooms
                     .Include(r => r.RoomType)
                     .Where(r => request.RoomIds.Contains(r.Id))
                     .ToListAsync();
 
-                // 4. Tạo đối tượng Booking
+                if (rooms.Count != request.RoomIds.Count)
+                    throw new Exception("Một số phòng không tồn tại.");
+
+                // 3. Create booking
                 var booking = new Booking
                 {
                     Id = Guid.NewGuid(),
@@ -65,31 +74,37 @@ namespace Infrastructure.Services
 
                 decimal totalAmount = 0;
 
-                // 5. Tạo chi tiết từng phòng (BookingDetail)
+                // 4. Create details
                 foreach (var room in rooms)
                 {
                     var price = room.RoomType.PricePerNight;
-                    var subTotal = price * totalNights;
 
                     booking.BookingDetails.Add(new BookingDetail
                     {
                         Id = Guid.NewGuid(),
+                        BookingId = booking.Id,
                         RoomId = room.Id,
-                        PricePerNight = price, // Snapshot giá
+                        PricePerNight = price,
                         Nights = totalNights
                     });
-                    totalAmount += subTotal;
+
+                    totalAmount += price * totalNights;
                 }
 
                 booking.TotalAmount = totalAmount;
 
+                // 5. SAVE
                 _context.Bookings.Add(booking);
-                await _context.SaveChangesAsync();
+
+                var result = await _context.SaveChangesAsync();
+                if (result == 0)
+                    throw new Exception("Không thể lưu booking.");
+
                 await transaction.CommitAsync();
 
                 return booking;
             }
-            catch (Exception)
+            catch
             {
                 await transaction.RollbackAsync();
                 throw;
