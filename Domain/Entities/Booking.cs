@@ -1,4 +1,5 @@
 ﻿using Domain.Common;
+using Domain.Enums;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -23,15 +24,12 @@ namespace Domain.Entities
 
         // Navigation
         public User User { get; set; } = default!;
+        public ICollection<Payment> Payments { get; set; }
+            = new List<Payment>();
 
         public Hotel Hotel { get; set; } = default!;
 
         public ICollection<BookingDetail> BookingDetails { get; set; } = new List<BookingDetail>();
     }
-    public enum BookingStatus
-    {
-        Pending = 0,
-        Confirmed = 1,
-        Cancelled = 2
-    }
+    
 }

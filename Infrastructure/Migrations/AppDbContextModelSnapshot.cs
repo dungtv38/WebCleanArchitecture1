@@ -143,7 +143,7 @@ namespace Infrastructure.Migrations
                             Id = new Guid("d72221bf-e4a9-4610-b152-1882ea22fe90"),
                             Address = "123 Ly Thuong Kiet",
                             City = "Hà Nội",
-                            CreatedAt = new DateTime(2026, 4, 20, 17, 36, 0, 134, DateTimeKind.Local).AddTicks(4490),
+                            CreatedAt = new DateTime(2026, 5, 23, 18, 20, 21, 743, DateTimeKind.Local).AddTicks(8950),
                             Description = "Khách sạn trung tâm thành phố",
                             Name = "Grand Central Hotel",
                             OwnerId = new Guid("eec4b862-8bba-417c-904a-b926c33a7899")
@@ -217,6 +217,77 @@ namespace Infrastructure.Migrations
                     b.HasIndex("UserId");
 
                     b.ToTable("Notifications", (string)null);
+                });
+
+            modelBuilder.Entity("Domain.Entities.Payment", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<decimal>("Amount")
+                        .HasPrecision(18, 2)
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<Guid>("BookingId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("PaymentMethod")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<int>("Status")
+                        .HasColumnType("int");
+
+                    b.Property<string>("TransactionCode")
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<DateTime?>("UpdatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("BookingId");
+
+                    b.HasIndex("TransactionCode");
+
+                    b.ToTable("Payments", (string)null);
+                });
+
+            modelBuilder.Entity("Domain.Entities.PaymentDetail", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<decimal>("Amount")
+                        .HasPrecision(18, 2)
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("ItemName")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<Guid>("PaymentId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<DateTime?>("UpdatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("PaymentId");
+
+                    b.ToTable("PaymentDetails", (string)null);
                 });
 
             modelBuilder.Entity("Domain.Entities.Review", b =>
@@ -397,7 +468,7 @@ namespace Infrastructure.Migrations
                         new
                         {
                             Id = new Guid("eec4b862-8bba-417c-904a-b926c33a7899"),
-                            CreatedAt = new DateTime(2026, 4, 20, 17, 36, 0, 134, DateTimeKind.Local).AddTicks(4358),
+                            CreatedAt = new DateTime(2026, 5, 23, 18, 20, 21, 743, DateTimeKind.Local).AddTicks(8737),
                             Email = "admin@hotel.com",
                             FullName = "System Admin",
                             PasswordHash = "hashed_password",
@@ -477,6 +548,28 @@ namespace Infrastructure.Migrations
                     b.Navigation("User");
                 });
 
+            modelBuilder.Entity("Domain.Entities.Payment", b =>
+                {
+                    b.HasOne("Domain.Entities.Booking", "Booking")
+                        .WithMany("Payments")
+                        .HasForeignKey("BookingId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("Booking");
+                });
+
+            modelBuilder.Entity("Domain.Entities.PaymentDetail", b =>
+                {
+                    b.HasOne("Domain.Entities.Payment", "Payment")
+                        .WithMany("PaymentDetails")
+                        .HasForeignKey("PaymentId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Payment");
+                });
+
             modelBuilder.Entity("Domain.Entities.Review", b =>
                 {
                     b.HasOne("Domain.Entities.Hotel", "Hotel")
@@ -532,6 +625,8 @@ namespace Infrastructure.Migrations
             modelBuilder.Entity("Domain.Entities.Booking", b =>
                 {
                     b.Navigation("BookingDetails");
+
+                    b.Navigation("Payments");
                 });
 
             modelBuilder.Entity("Domain.Entities.Hotel", b =>
@@ -539,6 +634,11 @@ namespace Infrastructure.Migrations
                     b.Navigation("Images");
 
                     b.Navigation("RoomTypes");
+                });
+
+            modelBuilder.Entity("Domain.Entities.Payment", b =>
+                {
+                    b.Navigation("PaymentDetails");
                 });
 
             modelBuilder.Entity("Domain.Entities.Room", b =>
