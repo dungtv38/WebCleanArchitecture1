@@ -9,7 +9,6 @@ using Microsoft.OpenApi.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// --- 1. ĐĂNG KÝ SERVICES (Dưới builder.Services) ---
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
@@ -18,14 +17,14 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
-// Đăng ký các Service của bạn
+
 builder.Services.AddScoped<IAuthService, AuthService>();
 builder.Services.AddScoped<IHotelService, HotelService>();
 builder.Services.AddScoped<IRoomTypeService, RoomTypeService>();
 builder.Services.AddScoped<IRoomService, RoomService>();
 builder.Services.AddScoped<IBookingService, BookingService>();
 builder.Services.AddScoped<JwtService>(); 
-// Cấu hình Authentication (DI chuyển lên trước app.Build)
+
 var key = Encoding.UTF8.GetBytes(builder.Configuration["Jwt:Key"]!);
 builder.Services.AddAuthentication(options =>
 {
@@ -55,7 +54,7 @@ builder.Services.AddSwaggerGen(c =>
         Name = "Authorization",
         In = ParameterLocation.Header,
         Type = SecuritySchemeType.Http,
-        Scheme = "bearer", // 👈 QUAN TRỌNG: lowercase
+        Scheme = "bearer", 
         BearerFormat = "JWT"
     });
 
@@ -74,11 +73,24 @@ builder.Services.AddSwaggerGen(c =>
         }
     });
 });
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("ReactPolicy", policy =>
+    {
+        policy
+            .WithOrigins(
+                //"http://localhost:3000", // CRA
+                "http://localhost:5173"  // Vite
+            )
+            .AllowAnyHeader()
+            .AllowAnyMethod();
+    });
+});
 
-// --- 2. KHỞI TẠO APP (Sau khi đã đăng ký hết Services) ---
+
 var app = builder.Build();
 
-// --- 3. CẤU HÌNH MIDDLEWARE (Thứ tự rất quan trọng) ---
+
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
@@ -87,10 +99,10 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-// QUAN TRỌNG: Authentication phải đứng TRƯỚC Authorization
+
 app.UseAuthentication();
 app.UseAuthorization();
-
+app.UseCors("ReactPolicy");
 
 app.MapControllers();
 
