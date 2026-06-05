@@ -21,8 +21,48 @@ public class AuthController : ControllerBase
         var result = await _authService.RegisterAsync(request);
         return Ok(result);
     }
-  
- 
+    
+    
+    [HttpPost("refresh")]
+    public async Task<IActionResult> Refresh()
+    {
+        var refreshToken =
+            Request.Cookies["refreshToken"];
+
+        if (string.IsNullOrEmpty(refreshToken))
+        {
+            return Unauthorized();
+        }
+
+        return Ok(
+            await _authService.RefreshTokenAsync(
+                refreshToken
+            )
+        );
+    }
+    [HttpPost("logout")]
+    public async Task<IActionResult> Logout()
+    {
+        var refreshToken =
+            Request.Cookies["refreshToken"];
+
+        if (!string.IsNullOrEmpty(refreshToken))
+        {
+            await _authService.LogoutAsync(
+                refreshToken
+            );
+        }
+
+        Response.Cookies.Delete(
+            "refreshToken"
+        );
+
+        return Ok(new
+        {
+            message = "Logged out successfully"
+        });
+    }
+
 
 
 
@@ -30,6 +70,21 @@ public class AuthController : ControllerBase
     public async Task<IActionResult> Login(LoginRequest request)
     {
         var result = await _authService.LoginAsync(request);
-        return Ok(result);
+
+        Response.Cookies.Append(
+            "refreshToken",
+            result.RefreshToken,
+            new CookieOptions
+            {
+                HttpOnly = true,
+                Secure = false, // localhost
+                SameSite = SameSiteMode.Lax,
+                Expires = DateTime.UtcNow.AddDays(7)
+            });
+
+        return Ok(new
+        {
+            accessToken = result.AccessToken
+        });
     }
 }

@@ -143,7 +143,7 @@ namespace Infrastructure.Migrations
                             Id = new Guid("d72221bf-e4a9-4610-b152-1882ea22fe90"),
                             Address = "123 Ly Thuong Kiet",
                             City = "Hà Nội",
-                            CreatedAt = new DateTime(2026, 5, 23, 18, 20, 21, 743, DateTimeKind.Local).AddTicks(8950),
+                            CreatedAt = new DateTime(2026, 6, 5, 15, 13, 35, 305, DateTimeKind.Local).AddTicks(2157),
                             Description = "Khách sạn trung tâm thành phố",
                             Name = "Grand Central Hotel",
                             OwnerId = new Guid("eec4b862-8bba-417c-904a-b926c33a7899")
@@ -288,6 +288,32 @@ namespace Infrastructure.Migrations
                     b.HasIndex("PaymentId");
 
                     b.ToTable("PaymentDetails", (string)null);
+                });
+
+            modelBuilder.Entity("Domain.Entities.RefreshToken", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<DateTime>("ExpiresAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsRevoked")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Token")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<Guid>("UserId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("RefreshTokens");
                 });
 
             modelBuilder.Entity("Domain.Entities.Review", b =>
@@ -468,7 +494,7 @@ namespace Infrastructure.Migrations
                         new
                         {
                             Id = new Guid("eec4b862-8bba-417c-904a-b926c33a7899"),
-                            CreatedAt = new DateTime(2026, 5, 23, 18, 20, 21, 743, DateTimeKind.Local).AddTicks(8737),
+                            CreatedAt = new DateTime(2026, 6, 5, 15, 13, 35, 305, DateTimeKind.Local).AddTicks(1928),
                             Email = "admin@hotel.com",
                             FullName = "System Admin",
                             PasswordHash = "hashed_password",
@@ -570,6 +596,17 @@ namespace Infrastructure.Migrations
                     b.Navigation("Payment");
                 });
 
+            modelBuilder.Entity("Domain.Entities.RefreshToken", b =>
+                {
+                    b.HasOne("Domain.Entities.User", "User")
+                        .WithMany("RefreshTokens")
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("User");
+                });
+
             modelBuilder.Entity("Domain.Entities.Review", b =>
                 {
                     b.HasOne("Domain.Entities.Hotel", "Hotel")
@@ -658,6 +695,8 @@ namespace Infrastructure.Migrations
                     b.Navigation("Bookings");
 
                     b.Navigation("Notifications");
+
+                    b.Navigation("RefreshTokens");
 
                     b.Navigation("Reviews");
                 });

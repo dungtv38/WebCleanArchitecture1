@@ -96,7 +96,7 @@ const Home = () => {
                 className="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition duration-300"
               >
                 <img
-                  src="https://images.unsplash.com/photo-1566073771259-6a8506099945"
+                  src="{images[0]}"
                   className="h-56 w-full object-cover"
                 />
 

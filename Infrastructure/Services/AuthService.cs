@@ -21,11 +21,11 @@ namespace Infrastructure.Services
             _context = context;
             _jwtService = jwtService;
         }
-       
+
         public async Task<AuthResponse> LoginAsync(LoginRequest request)
         {
             var user = await _context.Users
-                    .FirstOrDefaultAsync(x => x.Email == request.Email);
+                .FirstOrDefaultAsync(x => x.Email == request.Email);
 
             if (user == null ||
                 !BCrypt.Net.BCrypt.Verify(request.Password, user.PasswordHash))
@@ -33,9 +33,27 @@ namespace Infrastructure.Services
                 throw new Exception("Invalid credentials");
             }
 
+            var accessToken = _jwtService.GenerateToken(user);
+
+            var refreshToken = _jwtService.GenerateRefreshToken();
+
+            var refreshTokenEntity = new RefreshToken
+            {
+                Id = Guid.NewGuid(),
+                Token = refreshToken,
+                UserId = user.Id,
+                ExpiresAt = DateTime.UtcNow.AddDays(7),
+                IsRevoked = false
+            };
+
+            _context.RefreshTokens.Add(refreshTokenEntity);
+
+            await _context.SaveChangesAsync();
+
             return new AuthResponse
             {
-                Token = _jwtService.GenerateToken(user)
+                AccessToken = accessToken,
+                RefreshToken = refreshToken
             };
         }
 
@@ -53,7 +71,7 @@ namespace Infrastructure.Services
                 Email = request.Email,
                 PasswordHash = BCrypt.Net.BCrypt.HashPassword(request.Password),
                 PhoneNumber = request.PhoneNumber,
-                Role = request.Role, // Nhận Role từ Client gửi lên
+                Role = UserRole.Customer,
                 CreatedAt = DateTime.UtcNow
             };
 
@@ -63,8 +81,51 @@ namespace Infrastructure.Services
             // 3. Trả về Token (JwtService của bạn sẽ tự động bốc Role này vào Claim)
             return new AuthResponse
             {
-                Token = _jwtService.GenerateToken(user)
+                AccessToken = _jwtService.GenerateToken(user)
             };
+        }
+        public async Task<AuthResponse>
+    RefreshTokenAsync(
+        string refreshToken)
+        {
+            var token = await _context.RefreshTokens
+                .Include(x => x.User)
+                .FirstOrDefaultAsync(x =>
+                    x.Token == refreshToken &&
+                    !x.IsRevoked);
+
+            if (token == null)
+                throw new Exception(
+                    "Invalid refresh token");
+
+            if (token.ExpiresAt <
+                DateTime.UtcNow)
+                throw new Exception(
+                    "Refresh token expired");
+
+            return new AuthResponse
+            {
+                AccessToken =
+                    _jwtService.GenerateToken(
+                        token.User
+                    )
+            };
+        }
+
+        public async Task LogoutAsync(
+     string refreshToken)
+        {
+            var token =
+                await _context.RefreshTokens
+                .FirstOrDefaultAsync(x =>
+                    x.Token == refreshToken);
+
+            if (token != null)
+            {
+                token.IsRevoked = true;
+
+                await _context.SaveChangesAsync();
+            }
         }
     }
 }

@@ -24,8 +24,9 @@ namespace Infrastructure.Persistence
         public DbSet<Notification> Notifications => Set<Notification>();
         public DbSet<HotelImage> HotelImages => Set<HotelImage>();
         public DbSet<RoomImage> RoomImages => Set<RoomImage>();
+        public DbSet<RefreshToken> RefreshTokens { get; set; }
 
-       
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.ApplyConfigurationsFromAssembly(typeof(AppDbContext).Assembly);

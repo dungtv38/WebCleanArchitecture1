@@ -36,6 +36,30 @@
         }
       }
     },
+    "/api/Auth/refresh": {
+      "post": {
+        "tags": [
+          "Auth"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Auth/logout": {
+      "post": {
+        "tags": [
+          "Auth"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/Auth/login": {
       "post": {
         "tags": [
@@ -619,9 +643,6 @@
           "phoneNumber": {
             "type": "string",
             "nullable": true
-          },
-          "role": {
-            "$ref": "#/components/schemas/UserRole"
           }
         },
         "additionalProperties": false
@@ -697,15 +718,6 @@
           }
         },
         "additionalProperties": false
-      },
-      "UserRole": {
-        "enum": [
-          1,
-          2,
-          3
-        ],
-        "type": "integer",
-        "format": "int32"
       }
     },
     "securitySchemes": {

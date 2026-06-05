@@ -11,7 +11,7 @@ namespace Application.Interfaces
     public interface IHotelService
     {
         Task CreateAsync(CreateHotelRequest request);
-        Task<List<Hotel>> GetAllAsync();
+        Task<List<Getallhotel>> GetAllAsync();
         Task<bool> UpdateAsync(Guid id, UpdateHotelRequest request);
         Task<bool> DeleteAsync(Guid id);
     }

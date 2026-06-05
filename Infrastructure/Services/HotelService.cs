@@ -6,6 +6,7 @@ using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -64,9 +65,22 @@ namespace Infrastructure.Services
             return await _context.SaveChangesAsync() > 0;
         }
 
-        public async Task<List<Hotel>> GetAllAsync()
+       
+
+        public async Task<List<Getallhotel>> GetAllAsync()
         {
-            return await _context.Hotels.ToListAsync();
+            return await _context.Hotels
+         .Select(h => new Getallhotel
+         {
+             Id = h.Id,
+             Name = h.Name,
+             Address = h.Address,
+             Description = h.Description,
+             Images = h.Images
+                 .Select(i => i.ImageUrl)
+                 .ToList()
+         })
+         .ToListAsync();
         }
 
         public async Task<bool> UpdateAsync(Guid id, UpdateHotelRequest request)
