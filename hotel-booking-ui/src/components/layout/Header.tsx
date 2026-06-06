@@ -1,23 +1,23 @@
+import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
 const Header = () => {
   const navigate = useNavigate();
 
-  const token = localStorage.getItem("token");
+  const [token, setToken] = useState(
+    localStorage.getItem("token")
+  );
 
   const handleLogout = () => {
     localStorage.removeItem("token");
-
-    navigate("/login");
+    setToken(null); // update UI ngay
+    navigate("/home");
   };
 
   return (
     <header className="bg-blue-600 text-white">
       <div className="max-w-7xl mx-auto px-5 py-4 flex items-center justify-between">
-        <Link
-          to="/"
-          className="text-2xl font-bold"
-        >
+        <Link to="/" className="text-2xl font-bold">
           Hotel Booking
         </Link>
 
@@ -40,12 +40,7 @@ const Header = () => {
             </>
           ) : (
             <>
-              <Link
-                to="/login"
-                className="hover:text-gray-200"
-              >
-                Login
-              </Link>
+              <Link to="/login">Login</Link>
 
               <Link
                 to="/register"
