@@ -10,14 +10,12 @@ namespace Application.DTOs
     {
         public Guid HotelId { get; set; }
         public string Name { get; set; } = default!;
-        public decimal PricePerNight { get; set; }
-        public int MaxGuests { get; set; }
+      
     }
     public class UpdateRoomTypeRequest
     {
         public string Name { get; set; } = default!;
-        public decimal PricePerNight { get; set; }
-        public int MaxGuests { get; set; }
+      
     }
 
 }

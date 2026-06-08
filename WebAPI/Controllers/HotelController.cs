@@ -36,6 +36,18 @@ namespace WebAPI.Controllers
             var success = await _service.UpdateAsync(id, request);
             return success ? NoContent() : NotFound();
         }
+        [HttpGet("{id}")]
+        public async Task<IActionResult> GetHotelDetail(Guid id)
+        {
+            var result = await _service.GetHotelDetailAsync(id);
+
+            if (result == null)
+            {
+                return NotFound(new { message = "Không tìm thấy khách sạn hoặc phòng nào!" });
+            }
+
+            return Ok(result);
+        }
 
         [HttpDelete("{id}")]
         public async Task<IActionResult> Delete(Guid id)

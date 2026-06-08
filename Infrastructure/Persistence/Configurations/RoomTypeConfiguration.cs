@@ -21,11 +21,7 @@ namespace Infrastructure.Persistence.Configurations
                    .IsRequired()
                    .HasMaxLength(100);
 
-            builder.Property(x => x.PricePerNight)
-                   .HasPrecision(18, 2);
-
-            builder.Property(x => x.MaxGuests)
-                   .IsRequired();
+          
 
             builder.HasOne(x => x.Hotel)
                    .WithMany(h => h.RoomTypes)

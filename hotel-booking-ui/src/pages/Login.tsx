@@ -20,7 +20,7 @@ export default function Login() {
         res.data.accessToken
       );
 
-      navigate("/Home"); // 👈 CHUYỂN VỀ HOME
+      navigate("/"); // 👈 CHUYỂN VỀ HOME
 
     } catch (err) {
       console.error(err);

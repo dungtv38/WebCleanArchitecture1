@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Application.DTOs
+﻿namespace Application.DTOs
 {
     public class RoomResponse
     {
@@ -13,6 +7,9 @@ namespace Application.DTOs
         public string RoomNumber { get; set; } = default!;
         public string? Note { get; set; }
         public string Status { get; set; } = default!;
+
+        public decimal PricePerNight { get; set; }
+        public int MaxGuests { get; set; }
 
         public List<string> Images { get; set; } = new();
     }

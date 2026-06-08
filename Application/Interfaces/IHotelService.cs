@@ -12,6 +12,7 @@ namespace Application.Interfaces
     {
         Task CreateAsync(CreateHotelRequest request);
         Task<List<Getallhotel>> GetAllAsync();
+        Task<HotelDetailDTO?> GetHotelDetailAsync(Guid hotelId);
         Task<bool> UpdateAsync(Guid id, UpdateHotelRequest request);
         Task<bool> DeleteAsync(Guid id);
     }

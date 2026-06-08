@@ -17,12 +17,12 @@ namespace Infrastructure.Services
         public RoomTypeService(AppDbContext context)
         {
             _context = context;
-            
         }
+
         public async Task CreateAsync(CreateRoomTypeRequest request)
         {
             var hotelExists = await _context.Hotels
-          .AnyAsync(x => x.Id == request.HotelId);
+                .AnyAsync(x => x.Id == request.HotelId);
 
             if (!hotelExists)
                 throw new Exception("Hotel not found");
@@ -32,8 +32,6 @@ namespace Infrastructure.Services
                 Id = Guid.NewGuid(),
                 HotelId = request.HotelId,
                 Name = request.Name,
-                PricePerNight = request.PricePerNight,
-                MaxGuests = request.MaxGuests,
                 CreatedAt = DateTime.UtcNow
             };
 
@@ -43,17 +41,20 @@ namespace Infrastructure.Services
 
         public async Task DeleteAsync(Guid id)
         {
-            var rootype = await _context.RoomTypes.FindAsync(id);
-            if (rootype == null)
+            var roomType = await _context.RoomTypes.FindAsync(id);
+            if (roomType == null)
                 throw new Exception("RoomType not found");
 
-            _context.RoomTypes.Remove(rootype);
+            _context.RoomTypes.Remove(roomType);
             await _context.SaveChangesAsync();
         }
 
         public async Task<List<RoomType>> GetByHotelIdAsync(Guid hotelId)
         {
-           return await _context.RoomTypes.Where(x=>x.Id==hotelId).ToListAsync();
+            // 🌟 SỬA LỖI LOGIC: Phải lọc theo HotelId chứ không phải x.Id (RoomTypeId)
+            return await _context.RoomTypes
+                .Where(x => x.HotelId == hotelId)
+                .ToListAsync();
         }
 
         public async Task UpdateAsync(Guid id, UpdateRoomTypeRequest request)
@@ -64,8 +65,6 @@ namespace Infrastructure.Services
                 throw new Exception("RoomType not found");
 
             roomType.Name = request.Name;
-            roomType.PricePerNight = request.PricePerNight;
-            roomType.MaxGuests = request.MaxGuests;
 
             await _context.SaveChangesAsync();
         }

@@ -121,7 +121,7 @@ export function SignupForm({
               {/* LOGIN */}
               <p className="text-center text-sm">
                 Đã có tài khoản?{" "}
-                <a href="/signin" className="underline">
+                <a href="/login" className="underline">
                   Đăng nhập
                 </a>
               </p>

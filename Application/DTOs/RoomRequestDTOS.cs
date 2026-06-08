@@ -1,9 +1,4 @@
 ﻿using Domain.Entities;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Application.DTOs
 {
@@ -12,15 +7,23 @@ namespace Application.DTOs
         public Guid RoomTypeId { get; set; }
         public string RoomNumber { get; set; } = default!;
         public string? Note { get; set; }
-   
+
+        // 🌟 THÊM 2 TRƯỜNG NÀY VÀO ĐÂY
+        public decimal PricePerNight { get; set; }
+        public int MaxGuests { get; set; }
+
         public List<string>? ImageUrls { get; set; }
     }
+
     public class UpdateRoomRequest
     {
         public string RoomNumber { get; set; } = default!;
         public string? Note { get; set; }
 
-        // Danh sách ảnh mới (giữ lại)
+        // 🌟 THÊM 2 TRƯỜNG NÀY VÀO ĐÂY ĐỂ CHO PHÉP SỬA GIÁ PHÒNG
+        public decimal PricePerNight { get; set; }
+        public int MaxGuests { get; set; }
+
         public List<string>? ImageUrls { get; set; }
     }
 

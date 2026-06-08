@@ -204,6 +204,27 @@
           }
         }
       },
+      "get": {
+        "tags": [
+          "Hotel"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
       "delete": {
         "tags": [
           "Hotel"
@@ -579,6 +600,14 @@
             "type": "string",
             "nullable": true
           },
+          "pricePerNight": {
+            "type": "number",
+            "format": "double"
+          },
+          "maxGuests": {
+            "type": "integer",
+            "format": "int32"
+          },
           "imageUrls": {
             "type": "array",
             "items": {
@@ -599,14 +628,6 @@
           "name": {
             "type": "string",
             "nullable": true
-          },
-          "pricePerNight": {
-            "type": "number",
-            "format": "double"
-          },
-          "maxGuests": {
-            "type": "integer",
-            "format": "int32"
           }
         },
         "additionalProperties": false
@@ -691,6 +712,14 @@
             "type": "string",
             "nullable": true
           },
+          "pricePerNight": {
+            "type": "number",
+            "format": "double"
+          },
+          "maxGuests": {
+            "type": "integer",
+            "format": "int32"
+          },
           "imageUrls": {
             "type": "array",
             "items": {
@@ -707,14 +736,6 @@
           "name": {
             "type": "string",
             "nullable": true
-          },
-          "pricePerNight": {
-            "type": "number",
-            "format": "double"
-          },
-          "maxGuests": {
-            "type": "integer",
-            "format": "int32"
           }
         },
         "additionalProperties": false

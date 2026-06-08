@@ -116,6 +116,22 @@
   },
   {
     "ContainingType": "WebAPI.Controllers.HotelController",
+    "Method": "GetHotelDetail",
+    "RelativePath": "api/Hotel/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebAPI.Controllers.HotelController",
     "Method": "Delete",
     "RelativePath": "api/Hotel/{id}",
     "HttpMethod": "DELETE",

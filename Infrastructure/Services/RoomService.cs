@@ -12,7 +12,6 @@ using System.Threading.Tasks;
 namespace Infrastructure.Services
 {
     public class RoomService : IRoomService
-
     {
         private readonly AppDbContext _context;
         public RoomService(AppDbContext context) => _context = context;
@@ -20,12 +19,12 @@ namespace Infrastructure.Services
         public async Task<RoomResponse> CreateAsync(CreateRoomRequest request)
         {
             var roomTypeExists = await _context.RoomTypes
-             .AnyAsync(x => x.Id == request.RoomTypeId);
+                .AnyAsync(x => x.Id == request.RoomTypeId);
 
             if (!roomTypeExists)
                 throw new Exception("RoomType not found");
 
-            // 🔥 2. Check trùng RoomNumber
+            // 🔥 Check trùng RoomNumber
             var isDuplicate = await _context.Rooms
                 .AnyAsync(x => x.RoomTypeId == request.RoomTypeId
                             && x.RoomNumber == request.RoomNumber);
@@ -33,7 +32,7 @@ namespace Infrastructure.Services
             if (isDuplicate)
                 throw new Exception("Room number already exists");
 
-            // 🔥 3. Tạo Room
+            // 🔥 Tạo Room (Bổ sung gán Price và MaxGuests)
             var room = new Room
             {
                 Id = Guid.NewGuid(),
@@ -41,11 +40,13 @@ namespace Infrastructure.Services
                 RoomNumber = request.RoomNumber,
                 Note = request.Note,
                 Status = RoomStatus.Available,
+                PricePerNight = request.PricePerNight, // 🌟 THÊM MỚI
+                MaxGuests = request.MaxGuests,         // 🌟 THÊM MỚI
                 CreatedAt = DateTime.UtcNow,
                 Images = new List<RoomImage>()
             };
 
-            // 🔥 4. Thêm ảnh
+            // 🔥 Thêm ảnh
             if (request.ImageUrls != null && request.ImageUrls.Any())
             {
                 foreach (var url in request.ImageUrls)
@@ -54,7 +55,7 @@ namespace Infrastructure.Services
                     {
                         Id = Guid.NewGuid(),
                         ImageUrl = url,
-                        RoomId = room.Id, // ⚠ QUAN TRỌNG
+                        RoomId = room.Id,
                         CreatedAt = DateTime.UtcNow
                     });
                 }
@@ -63,6 +64,7 @@ namespace Infrastructure.Services
             _context.Rooms.Add(room);
             await _context.SaveChangesAsync();
 
+            // Trả về Response kèm thông tin giá và sức chứa mới
             return new RoomResponse
             {
                 Id = room.Id,
@@ -70,6 +72,8 @@ namespace Infrastructure.Services
                 RoomNumber = room.RoomNumber,
                 Note = room.Note,
                 Status = room.Status.ToString(),
+                PricePerNight = room.PricePerNight, // 🌟 THÊM MỚI
+                MaxGuests = room.MaxGuests,         // 🌟 THÊM MỚI
                 Images = room.Images.Select(i => i.ImageUrl).ToList()
             };
         }
@@ -77,39 +81,36 @@ namespace Infrastructure.Services
         public async Task<bool> DeleteAsync(Guid roomId)
         {
             var room = await _context.Rooms
-            .Include(r => r.Images)
-            .FirstOrDefaultAsync(r => r.Id == roomId);
+                .Include(r => r.Images)
+                .FirstOrDefaultAsync(r => r.Id == roomId);
 
             if (room == null)
                 throw new Exception("Room not found");
 
-            // 🔥 Xoá cả ảnh (cascade hoặc manual)
             _context.RoomImages.RemoveRange(room.Images);
-
             _context.Rooms.Remove(room);
 
             await _context.SaveChangesAsync();
             return true;
         }
 
-        public async Task<List<Room>> GetByRoomTypeIdAsync(Guid roomTypeId)
+        public async Task<Room> GetByRoomTypeIdAsync(Guid roomId)
         {
             return await _context.Rooms
-            .Where(r => r.RoomTypeId == roomTypeId)
-            .Include(r => r.Images)
-            .ToListAsync();
+         .Include(r => r.Images) 
+         .FirstOrDefaultAsync(r => r.Id == roomId);
         }
 
         public async Task<bool> UpdateAsync(Guid roomId, UpdateRoomRequest request)
         {
             var room = await _context.Rooms
-         .Include(r => r.Images)
-         .FirstOrDefaultAsync(r => r.Id == roomId);
+                .Include(r => r.Images)
+                .FirstOrDefaultAsync(r => r.Id == roomId);
 
             if (room == null)
                 throw new Exception("Room not found");
 
-            // 🔥 1. Check trùng RoomNumber
+            // 🔥 Check trùng RoomNumber
             var isDuplicate = await _context.Rooms
                 .AnyAsync(x => x.Id != roomId &&
                                x.RoomTypeId == room.RoomTypeId &&
@@ -118,23 +119,23 @@ namespace Infrastructure.Services
             if (isDuplicate)
                 throw new Exception("Room number already exists");
 
-            // 🔥 2. Update field
+            // 🔥 Update fields (Cho phép cập nhật cả Price và MaxGuests)
             room.RoomNumber = request.RoomNumber;
             room.Note = request.Note;
+            room.PricePerNight = request.PricePerNight; // 🌟 THÊM MỚI
+            room.MaxGuests = request.MaxGuests;         // 🌟 THÊM MỚI
 
-            // 🔥 3. Update Images
+            // 🔥 Update Images
             if (request.ImageUrls != null)
             {
                 var existingImages = room.Images.Select(x => x.ImageUrl).ToList();
 
-                // ❌ Remove ảnh không còn
                 var imagesToRemove = room.Images
                     .Where(img => !request.ImageUrls.Contains(img.ImageUrl))
                     .ToList();
 
                 _context.RoomImages.RemoveRange(imagesToRemove);
 
-                // ➕ Add ảnh mới
                 var imagesToAdd = request.ImageUrls
                     .Where(url => !existingImages.Contains(url));
 

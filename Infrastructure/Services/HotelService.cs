@@ -83,6 +83,56 @@ namespace Infrastructure.Services
          .ToListAsync();
         }
 
+        public async Task<HotelDetailDTO?> GetHotelDetailAsync(Guid hotelId)
+        {
+            var hotel = await _context.Hotels
+                .Include(h => h.Images)
+                .Include(h => h.RoomTypes)
+                    .ThenInclude(rt => rt.Rooms)
+                .FirstOrDefaultAsync(h => h.Id == hotelId);
+
+            // Nếu không tìm thấy khách sạn, trả về null để Controller tự xử lý lỗi 404
+            if (hotel == null) return null;
+
+            // 2. Chuyển đổi (Map) cấu trúc Entity sang DTO
+            var hotelDetailDto = new HotelDetailDTO
+            {
+                Id = hotel.Id,
+                Name = hotel.Name,
+                Description = hotel.Description,
+                Address = hotel.Address,
+                City = hotel.City,
+                Images = hotel.Images.Select(img => new HotelImageDTO
+                {
+                    Id = img.Id,
+                    ImageUrl = img.ImageUrl
+                }).ToList(),
+                RoomTypes = hotel.RoomTypes.Select(rt => new RoomTypeDTO
+                {
+                    Id = rt.Id,
+                    Name = rt.Name,
+                  
+                    // Map danh sách phòng nằm trong Loại phòng này
+                    Rooms = rt.Rooms.Select(r => new RoomDTO
+                    {
+                        Id = r.Id,
+                        RoomNumber = r.RoomNumber,
+                        Status = r.Status.ToString(), // Ép kiểu Enum sang chữ (String)
+                        Note = r.Note,
+                        PricePerNight = r.PricePerNight,
+                        MaxGuests = r.MaxGuests,
+                        
+                        Images = _context.RoomImages
+                     .Where(img => img.RoomId == r.Id)
+                     .Select(img => img.ImageUrl)
+                     .ToList()
+                    }).ToList()
+                }).ToList()
+            };
+
+            return hotelDetailDto;
+        }
+
         public async Task<bool> UpdateAsync(Guid id, UpdateHotelRequest request)
         {
             var hotel = await _context.Hotels.FindAsync(id);

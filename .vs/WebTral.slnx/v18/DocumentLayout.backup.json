@@ -3,120 +3,84 @@
   "WorkspaceRootPath": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{8D6B33C5-CEE1-20B5-A207-99CBB61F699C}|WebAPI\\WebAPI.csproj|c:\\users\\administrator\\source\\repos\\webcleanarchitecture1\\webapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{8D6B33C5-CEE1-20B5-A207-99CBB61F699C}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{5872AEB3-BAA3-FE31-B0EB-0FB6DBEDCF83}|Infrastructure\\Infrastructure.csproj|c:\\users\\administrator\\source\\repos\\webcleanarchitecture1\\infrastructure\\services\\roomservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5872AEB3-BAA3-FE31-B0EB-0FB6DBEDCF83}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\services\\roomservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F80C4E72-27A0-12B5-0634-DD5C11CFB0C1}|Application\\Application.csproj|c:\\users\\administrator\\source\\repos\\webcleanarchitecture1\\application\\interfaces\\iroomservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F80C4E72-27A0-12B5-0634-DD5C11CFB0C1}|Application\\Application.csproj|solutionrelative:application\\interfaces\\iroomservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8D6B33C5-CEE1-20B5-A207-99CBB61F699C}|WebAPI\\WebAPI.csproj|c:\\users\\administrator\\source\\repos\\webcleanarchitecture1\\webapi\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8D6B33C5-CEE1-20B5-A207-99CBB61F699C}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5872AEB3-BAA3-FE31-B0EB-0FB6DBEDCF83}|Infrastructure\\Infrastructure.csproj|c:\\users\\administrator\\source\\repos\\webcleanarchitecture1\\infrastructure\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5872AEB3-BAA3-FE31-B0EB-0FB6DBEDCF83}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F80C4E72-27A0-12B5-0634-DD5C11CFB0C1}|Application\\Application.csproj|c:\\users\\administrator\\source\\repos\\webcleanarchitecture1\\application\\interfaces\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F80C4E72-27A0-12B5-0634-DD5C11CFB0C1}|Application\\Application.csproj|solutionrelative:application\\interfaces\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5872AEB3-BAA3-FE31-B0EB-0FB6DBEDCF83}|Infrastructure\\Infrastructure.csproj|c:\\users\\administrator\\source\\repos\\webcleanarchitecture1\\infrastructure\\persistence\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5872AEB3-BAA3-FE31-B0EB-0FB6DBEDCF83}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\persistence\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E528BBC3-1C26-8C35-F682-23718816ADCD}|Domain\\Domain.csproj|c:\\users\\administrator\\source\\repos\\webcleanarchitecture1\\domain\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E528BBC3-1C26-8C35-F682-23718816ADCD}|Domain\\Domain.csproj|solutionrelative:domain\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5872AEB3-BAA3-FE31-B0EB-0FB6DBEDCF83}|Infrastructure\\Infrastructure.csproj|c:\\users\\administrator\\source\\repos\\webcleanarchitecture1\\infrastructure\\services\\jwtservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5872AEB3-BAA3-FE31-B0EB-0FB6DBEDCF83}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\services\\jwtservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F80C4E72-27A0-12B5-0634-DD5C11CFB0C1}|Application\\Application.csproj|c:\\users\\administrator\\source\\repos\\webcleanarchitecture1\\application\\dtos\\authresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F80C4E72-27A0-12B5-0634-DD5C11CFB0C1}|Application\\Application.csproj|solutionrelative:application\\dtos\\authresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F80C4E72-27A0-12B5-0634-DD5C11CFB0C1}|Application\\Application.csproj|c:\\users\\administrator\\source\\repos\\webcleanarchitecture1\\application\\interfaces\\ihotelservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F80C4E72-27A0-12B5-0634-DD5C11CFB0C1}|Application\\Application.csproj|solutionrelative:application\\interfaces\\ihotelservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F80C4E72-27A0-12B5-0634-DD5C11CFB0C1}|Application\\Application.csproj|c:\\users\\administrator\\source\\repos\\webcleanarchitecture1\\application\\dtos\\availableroomdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F80C4E72-27A0-12B5-0634-DD5C11CFB0C1}|Application\\Application.csproj|solutionrelative:application\\dtos\\availableroomdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5872AEB3-BAA3-FE31-B0EB-0FB6DBEDCF83}|Infrastructure\\Infrastructure.csproj|c:\\users\\administrator\\source\\repos\\webcleanarchitecture1\\infrastructure\\migrations\\20260605081336_addrefreshtoken.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5872AEB3-BAA3-FE31-B0EB-0FB6DBEDCF83}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\migrations\\20260605081336_addrefreshtoken.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E528BBC3-1C26-8C35-F682-23718816ADCD}|Domain\\Domain.csproj|c:\\users\\administrator\\source\\repos\\webcleanarchitecture1\\domain\\entities\\refreshtoken.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E528BBC3-1C26-8C35-F682-23718816ADCD}|Domain\\Domain.csproj|solutionrelative:domain\\entities\\refreshtoken.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E528BBC3-1C26-8C35-F682-23718816ADCD}|Domain\\Domain.csproj|c:\\users\\administrator\\source\\repos\\webcleanarchitecture1\\domain\\entities\\paymentdetail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E528BBC3-1C26-8C35-F682-23718816ADCD}|Domain\\Domain.csproj|solutionrelative:domain\\entities\\paymentdetail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E528BBC3-1C26-8C35-F682-23718816ADCD}|Domain\\Domain.csproj|c:\\users\\administrator\\source\\repos\\webcleanarchitecture1\\domain\\enums\\paymentstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E528BBC3-1C26-8C35-F682-23718816ADCD}|Domain\\Domain.csproj|solutionrelative:domain\\enums\\paymentstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E528BBC3-1C26-8C35-F682-23718816ADCD}|Domain\\Domain.csproj|c:\\users\\administrator\\source\\repos\\webcleanarchitecture1\\domain\\entities\\payment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E528BBC3-1C26-8C35-F682-23718816ADCD}|Domain\\Domain.csproj|solutionrelative:domain\\entities\\payment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E528BBC3-1C26-8C35-F682-23718816ADCD}|Domain\\Domain.csproj|c:\\users\\administrator\\source\\repos\\webcleanarchitecture1\\domain\\entities\\userrole.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E528BBC3-1C26-8C35-F682-23718816ADCD}|Domain\\Domain.csproj|solutionrelative:domain\\entities\\userrole.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5872AEB3-BAA3-FE31-B0EB-0FB6DBEDCF83}|Infrastructure\\Infrastructure.csproj|c:\\users\\administrator\\source\\repos\\webcleanarchitecture1\\infrastructure\\services\\hotelservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5872AEB3-BAA3-FE31-B0EB-0FB6DBEDCF83}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\services\\hotelservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F80C4E72-27A0-12B5-0634-DD5C11CFB0C1}|Application\\Application.csproj|c:\\users\\administrator\\source\\repos\\webcleanarchitecture1\\application\\dtos\\registerrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F80C4E72-27A0-12B5-0634-DD5C11CFB0C1}|Application\\Application.csproj|solutionrelative:application\\dtos\\registerrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F80C4E72-27A0-12B5-0634-DD5C11CFB0C1}|Application\\Application.csproj|c:\\users\\administrator\\source\\repos\\webcleanarchitecture1\\application\\dtos\\createbookingrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F80C4E72-27A0-12B5-0634-DD5C11CFB0C1}|Application\\Application.csproj|solutionrelative:application\\dtos\\createbookingrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F80C4E72-27A0-12B5-0634-DD5C11CFB0C1}|Application\\Application.csproj|c:\\users\\administrator\\source\\repos\\webcleanarchitecture1\\application\\dtos\\createhotelrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F80C4E72-27A0-12B5-0634-DD5C11CFB0C1}|Application\\Application.csproj|solutionrelative:application\\dtos\\createhotelrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F80C4E72-27A0-12B5-0634-DD5C11CFB0C1}|Application\\Application.csproj|c:\\users\\administrator\\source\\repos\\webcleanarchitecture1\\application\\dtos\\getallhotel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F80C4E72-27A0-12B5-0634-DD5C11CFB0C1}|Application\\Application.csproj|solutionrelative:application\\dtos\\getallhotel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5872AEB3-BAA3-FE31-B0EB-0FB6DBEDCF83}|Infrastructure\\Infrastructure.csproj|c:\\users\\administrator\\source\\repos\\webcleanarchitecture1\\infrastructure\\persistence\\configurations\\hotelimageconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5872AEB3-BAA3-FE31-B0EB-0FB6DBEDCF83}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\persistence\\configurations\\hotelimageconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E528BBC3-1C26-8C35-F682-23718816ADCD}|Domain\\Domain.csproj|c:\\users\\administrator\\source\\repos\\webcleanarchitecture1\\domain\\entities\\bookingdetail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E528BBC3-1C26-8C35-F682-23718816ADCD}|Domain\\Domain.csproj|solutionrelative:domain\\entities\\bookingdetail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E528BBC3-1C26-8C35-F682-23718816ADCD}|Domain\\Domain.csproj|c:\\users\\administrator\\source\\repos\\webcleanarchitecture1\\domain\\entities\\hotelimage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E528BBC3-1C26-8C35-F682-23718816ADCD}|Domain\\Domain.csproj|solutionrelative:domain\\entities\\hotelimage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{8D6B33C5-CEE1-20B5-A207-99CBB61F699C}|WebAPI\\WebAPI.csproj|c:\\users\\administrator\\source\\repos\\webcleanarchitecture1\\webapi\\controllers\\bookingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8D6B33C5-CEE1-20B5-A207-99CBB61F699C}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\controllers\\bookingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E528BBC3-1C26-8C35-F682-23718816ADCD}|Domain\\Domain.csproj|c:\\users\\administrator\\source\\repos\\webcleanarchitecture1\\domain\\entities\\hotel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E528BBC3-1C26-8C35-F682-23718816ADCD}|Domain\\Domain.csproj|solutionrelative:domain\\entities\\hotel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E528BBC3-1C26-8C35-F682-23718816ADCD}|Domain\\Domain.csproj|c:\\users\\administrator\\source\\repos\\webcleanarchitecture1\\domain\\common\\baseentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E528BBC3-1C26-8C35-F682-23718816ADCD}|Domain\\Domain.csproj|solutionrelative:domain\\common\\baseentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5872AEB3-BAA3-FE31-B0EB-0FB6DBEDCF83}|Infrastructure\\Infrastructure.csproj|c:\\users\\administrator\\source\\repos\\webcleanarchitecture1\\infrastructure\\services\\bookingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5872AEB3-BAA3-FE31-B0EB-0FB6DBEDCF83}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\services\\bookingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8D6B33C5-CEE1-20B5-A207-99CBB61F699C}|WebAPI\\WebAPI.csproj|c:\\users\\administrator\\source\\repos\\webcleanarchitecture1\\webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8D6B33C5-CEE1-20B5-A207-99CBB61F699C}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5872AEB3-BAA3-FE31-B0EB-0FB6DBEDCF83}|Infrastructure\\Infrastructure.csproj|c:\\users\\administrator\\source\\repos\\webcleanarchitecture1\\infrastructure\\services\\hotelservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5872AEB3-BAA3-FE31-B0EB-0FB6DBEDCF83}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\services\\hotelservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E528BBC3-1C26-8C35-F682-23718816ADCD}|Domain\\Domain.csproj|c:\\users\\administrator\\source\\repos\\webcleanarchitecture1\\domain\\common\\baseentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E528BBC3-1C26-8C35-F682-23718816ADCD}|Domain\\Domain.csproj|solutionrelative:domain\\common\\baseentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F80C4E72-27A0-12B5-0634-DD5C11CFB0C1}|Application\\Application.csproj|c:\\users\\administrator\\source\\repos\\webcleanarchitecture1\\application\\interfaces\\ibookingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F80C4E72-27A0-12B5-0634-DD5C11CFB0C1}|Application\\Application.csproj|solutionrelative:application\\interfaces\\ibookingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F80C4E72-27A0-12B5-0634-DD5C11CFB0C1}|Application\\Application.csproj|c:\\users\\administrator\\source\\repos\\webcleanarchitecture1\\application\\dtos\\createbookingrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F80C4E72-27A0-12B5-0634-DD5C11CFB0C1}|Application\\Application.csproj|solutionrelative:application\\dtos\\createbookingrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5872AEB3-BAA3-FE31-B0EB-0FB6DBEDCF83}|Infrastructure\\Infrastructure.csproj|c:\\users\\administrator\\source\\repos\\webcleanarchitecture1\\infrastructure\\persistence\\configurations\\bookingconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5872AEB3-BAA3-FE31-B0EB-0FB6DBEDCF83}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\persistence\\configurations\\bookingconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5872AEB3-BAA3-FE31-B0EB-0FB6DBEDCF83}|Infrastructure\\Infrastructure.csproj|c:\\users\\administrator\\source\\repos\\webcleanarchitecture1\\infrastructure\\persistence\\configurations\\bookingdetailconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5872AEB3-BAA3-FE31-B0EB-0FB6DBEDCF83}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\persistence\\configurations\\bookingdetailconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E528BBC3-1C26-8C35-F682-23718816ADCD}|Domain\\Domain.csproj|c:\\users\\administrator\\source\\repos\\webcleanarchitecture1\\domain\\enums\\bookingstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E528BBC3-1C26-8C35-F682-23718816ADCD}|Domain\\Domain.csproj|solutionrelative:domain\\enums\\bookingstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F80C4E72-27A0-12B5-0634-DD5C11CFB0C1}|Application\\Application.csproj|c:\\users\\administrator\\source\\repos\\webcleanarchitecture1\\application\\dtos\\getroomid.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F80C4E72-27A0-12B5-0634-DD5C11CFB0C1}|Application\\Application.csproj|solutionrelative:application\\dtos\\getroomid.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5872AEB3-BAA3-FE31-B0EB-0FB6DBEDCF83}|Infrastructure\\Infrastructure.csproj|c:\\users\\administrator\\source\\repos\\webcleanarchitecture1\\infrastructure\\services\\jwtservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5872AEB3-BAA3-FE31-B0EB-0FB6DBEDCF83}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\services\\jwtservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5872AEB3-BAA3-FE31-B0EB-0FB6DBEDCF83}|Infrastructure\\Infrastructure.csproj|c:\\users\\administrator\\source\\repos\\webcleanarchitecture1\\infrastructure\\services\\roomtypeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5872AEB3-BAA3-FE31-B0EB-0FB6DBEDCF83}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\services\\roomtypeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5872AEB3-BAA3-FE31-B0EB-0FB6DBEDCF83}|Infrastructure\\Infrastructure.csproj|c:\\users\\administrator\\source\\repos\\webcleanarchitecture1\\infrastructure\\persistence\\configurations\\roomconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5872AEB3-BAA3-FE31-B0EB-0FB6DBEDCF83}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\persistence\\configurations\\roomconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F80C4E72-27A0-12B5-0634-DD5C11CFB0C1}|Application\\Application.csproj|c:\\users\\administrator\\source\\repos\\webcleanarchitecture1\\application\\interfaces\\iroomtypeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F80C4E72-27A0-12B5-0634-DD5C11CFB0C1}|Application\\Application.csproj|solutionrelative:application\\interfaces\\iroomtypeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F80C4E72-27A0-12B5-0634-DD5C11CFB0C1}|Application\\Application.csproj|c:\\users\\administrator\\source\\repos\\webcleanarchitecture1\\application\\dtos\\roomresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F80C4E72-27A0-12B5-0634-DD5C11CFB0C1}|Application\\Application.csproj|solutionrelative:application\\dtos\\roomresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F80C4E72-27A0-12B5-0634-DD5C11CFB0C1}|Application\\Application.csproj|c:\\users\\administrator\\source\\repos\\webcleanarchitecture1\\application\\dtos\\roomrequestdtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F80C4E72-27A0-12B5-0634-DD5C11CFB0C1}|Application\\Application.csproj|solutionrelative:application\\dtos\\roomrequestdtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F80C4E72-27A0-12B5-0634-DD5C11CFB0C1}|Application\\Application.csproj|c:\\users\\administrator\\source\\repos\\webcleanarchitecture1\\application\\dtos\\roomtype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F80C4E72-27A0-12B5-0634-DD5C11CFB0C1}|Application\\Application.csproj|solutionrelative:application\\dtos\\roomtype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -126,217 +90,158 @@
       "DocumentGroups": [
         {
           "DockedWidth": 155,
-          "SelectedChildIndex": 10,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
-            },
-            {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "AuthController.cs",
-              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture1\\WebAPI\\Controllers\\AuthController.cs",
-              "RelativeDocumentMoniker": "WebAPI\\Controllers\\AuthController.cs",
-              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture1\\WebAPI\\Controllers\\AuthController.cs",
-              "RelativeToolTip": "WebAPI\\Controllers\\AuthController.cs",
-              "ViewState": "AgIAAB0AAAAAAAAAAAAwwC0AAAAaAAAAAAAAAA==",
+              "DocumentIndex": 12,
+              "Title": "Getroomid.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture1\\Application\\DTOs\\Getroomid.cs",
+              "RelativeDocumentMoniker": "Application\\DTOs\\Getroomid.cs",
+              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture1\\Application\\DTOs\\Getroomid.cs",
+              "RelativeToolTip": "Application\\DTOs\\Getroomid.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAA1wBYAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-05T08:22:48.951Z",
+              "WhenOpened": "2026-06-08T10:04:14.844Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "AppDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture1\\Infrastructure\\Persistence\\AppDbContext.cs",
-              "RelativeDocumentMoniker": "Infrastructure\\Persistence\\AppDbContext.cs",
-              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture1\\Infrastructure\\Persistence\\AppDbContext.cs",
-              "RelativeToolTip": "Infrastructure\\Persistence\\AppDbContext.cs",
-              "ViewState": "AgIAABgAAAAAAAAAAAA7wD0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-05T08:11:51.877Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "AvailableRoomDto.cs",
-              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture1\\Application\\DTOs\\AvailableRoomDto.cs",
-              "RelativeDocumentMoniker": "Application\\DTOs\\AvailableRoomDto.cs",
-              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture1\\Application\\DTOs\\AvailableRoomDto.cs",
-              "RelativeToolTip": "Application\\DTOs\\AvailableRoomDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-05T07:53:30.218Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "AuthResponse.cs",
-              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture1\\Application\\DTOs\\AuthResponse.cs",
-              "RelativeDocumentMoniker": "Application\\DTOs\\AuthResponse.cs",
-              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture1\\Application\\DTOs\\AuthResponse.cs",
-              "RelativeToolTip": "Application\\DTOs\\AuthResponse.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAiAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-05T07:53:28.664Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "AuthService.cs",
-              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture1\\Infrastructure\\Services\\AuthService.cs",
-              "RelativeDocumentMoniker": "Infrastructure\\Services\\AuthService.cs",
-              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture1\\Infrastructure\\Services\\AuthService.cs",
-              "RelativeToolTip": "Infrastructure\\Services\\AuthService.cs",
-              "ViewState": "AgIAAGUAAAAAAAAAAAAIwIAAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-05T06:51:48.58Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "20260605081336_AddRefreshToken.cs",
-              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture1\\Infrastructure\\Migrations\\20260605081336_AddRefreshToken.cs",
-              "RelativeDocumentMoniker": "Infrastructure\\Migrations\\20260605081336_AddRefreshToken.cs",
-              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture1\\Infrastructure\\Migrations\\20260605081336_AddRefreshToken.cs",
-              "RelativeToolTip": "Infrastructure\\Migrations\\20260605081336_AddRefreshToken.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-05T08:13:36.743Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "User.cs",
-              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture1\\Domain\\Entities\\User.cs",
-              "RelativeDocumentMoniker": "Domain\\Entities\\User.cs",
-              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture1\\Domain\\Entities\\User.cs",
-              "RelativeToolTip": "Domain\\Entities\\User.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-05T07:54:27.19Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "RefreshToken.cs",
-              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture1\\Domain\\Entities\\RefreshToken.cs",
-              "RelativeDocumentMoniker": "Domain\\Entities\\RefreshToken.cs",
-              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture1\\Domain\\Entities\\RefreshToken.cs",
-              "RelativeToolTip": "Domain\\Entities\\RefreshToken.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-05T08:11:08.541Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture1\\WebAPI\\appsettings.json",
-              "RelativeDocumentMoniker": "WebAPI\\appsettings.json",
-              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture1\\WebAPI\\appsettings.json",
-              "RelativeToolTip": "WebAPI\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAuAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-06-04T07:41:07.57Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "IAuthService.cs",
-              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture1\\Application\\Interfaces\\IAuthService.cs",
-              "RelativeDocumentMoniker": "Application\\Interfaces\\IAuthService.cs",
-              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture1\\Application\\Interfaces\\IAuthService.cs",
-              "RelativeToolTip": "Application\\Interfaces\\IAuthService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-05T08:14:25.739Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 13,
               "Title": "JwtService.cs",
               "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture1\\Infrastructure\\Services\\JwtService.cs",
               "RelativeDocumentMoniker": "Infrastructure\\Services\\JwtService.cs",
               "ToolTip": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture1\\Infrastructure\\Services\\JwtService.cs",
               "RelativeToolTip": "Infrastructure\\Services\\JwtService.cs",
-              "ViewState": "AgIAACIAAAAAAAAAAAAiwEMAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-05T08:15:00.707Z"
+              "WhenOpened": "2026-06-08T10:03:37.248Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "HotelService.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture1\\Infrastructure\\Services\\HotelService.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Services\\HotelService.cs",
+              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture1\\Infrastructure\\Services\\HotelService.cs",
+              "RelativeToolTip": "Infrastructure\\Services\\HotelService.cs",
+              "ViewState": "AgIAAFsAAAAAAAAAAAAcwHwAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-08T10:03:35.387Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "BookingService.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture1\\Infrastructure\\Services\\BookingService.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Services\\BookingService.cs",
+              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture1\\Infrastructure\\Services\\BookingService.cs",
+              "RelativeToolTip": "Infrastructure\\Services\\BookingService.cs",
+              "ViewState": "AgIAACEAAAAAAAAAAAAowC8AAABNAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-08T09:56:11.177Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "RoomService.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture1\\Infrastructure\\Services\\RoomService.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Services\\RoomService.cs",
+              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture1\\Infrastructure\\Services\\RoomService.cs*",
+              "RelativeToolTip": "Infrastructure\\Services\\RoomService.cs*",
+              "ViewState": "AgIAAFMAAAAAAAAAAAAwwGMAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-08T09:55:08.567Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture1\\WebAPI\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "WebAPI\\Controllers\\AuthController.cs",
+              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture1\\WebAPI\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "WebAPI\\Controllers\\AuthController.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-08T10:27:45.998Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "IRoomService.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture1\\Application\\Interfaces\\IRoomService.cs",
+              "RelativeDocumentMoniker": "Application\\Interfaces\\IRoomService.cs",
+              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture1\\Application\\Interfaces\\IRoomService.cs*",
+              "RelativeToolTip": "Application\\Interfaces\\IRoomService.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwA0AAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-08T09:54:49.062Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "BookingController.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture1\\WebAPI\\Controllers\\BookingController.cs",
+              "RelativeDocumentMoniker": "WebAPI\\Controllers\\BookingController.cs",
+              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture1\\WebAPI\\Controllers\\BookingController.cs",
+              "RelativeToolTip": "WebAPI\\Controllers\\BookingController.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAowDIAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-08T10:20:34.264Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "BaseEntity.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture1\\Domain\\Common\\BaseEntity.cs",
+              "RelativeDocumentMoniker": "Domain\\Common\\BaseEntity.cs",
+              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture1\\Domain\\Common\\BaseEntity.cs",
+              "RelativeToolTip": "Domain\\Common\\BaseEntity.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAgAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-08T10:27:06.919Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "BookingConfiguration.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture1\\Infrastructure\\Persistence\\Configurations\\BookingConfiguration.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Persistence\\Configurations\\BookingConfiguration.cs",
+              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture1\\Infrastructure\\Persistence\\Configurations\\BookingConfiguration.cs",
+              "RelativeToolTip": "Infrastructure\\Persistence\\Configurations\\BookingConfiguration.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAmwEIAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-08T10:09:15.752Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "BookingDetailConfiguration.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture1\\Infrastructure\\Persistence\\Configurations\\BookingDetailConfiguration.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Persistence\\Configurations\\BookingDetailConfiguration.cs",
+              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture1\\Infrastructure\\Persistence\\Configurations\\BookingDetailConfiguration.cs",
+              "RelativeToolTip": "Infrastructure\\Persistence\\Configurations\\BookingDetailConfiguration.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-08T10:09:18.602Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 8,
-              "Title": "IHotelService.cs",
-              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture1\\Application\\Interfaces\\IHotelService.cs",
-              "RelativeDocumentMoniker": "Application\\Interfaces\\IHotelService.cs",
-              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture1\\Application\\Interfaces\\IHotelService.cs",
-              "RelativeToolTip": "Application\\Interfaces\\IHotelService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-04T08:20:21.22Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "PaymentDetail.cs",
-              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture1\\Domain\\Entities\\PaymentDetail.cs",
-              "RelativeDocumentMoniker": "Domain\\Entities\\PaymentDetail.cs",
-              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture1\\Domain\\Entities\\PaymentDetail.cs",
-              "RelativeToolTip": "Domain\\Entities\\PaymentDetail.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABIAAAA4AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-05T08:09:44.645Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "Payment.cs",
-              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture1\\Domain\\Entities\\Payment.cs",
-              "RelativeDocumentMoniker": "Domain\\Entities\\Payment.cs",
-              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture1\\Domain\\Entities\\Payment.cs",
-              "RelativeToolTip": "Domain\\Entities\\Payment.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-05T08:09:41.391Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "PaymentStatus.cs",
-              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture1\\Domain\\Enums\\PaymentStatus.cs",
-              "RelativeDocumentMoniker": "Domain\\Enums\\PaymentStatus.cs",
-              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture1\\Domain\\Enums\\PaymentStatus.cs",
-              "RelativeToolTip": "Domain\\Enums\\PaymentStatus.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-05T08:09:58.559Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "UserRole.cs",
-              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture1\\Domain\\Entities\\UserRole.cs",
-              "RelativeDocumentMoniker": "Domain\\Entities\\UserRole.cs",
-              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture1\\Domain\\Entities\\UserRole.cs",
-              "RelativeToolTip": "Domain\\Entities\\UserRole.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-05T07:54:30.21Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
               "Title": "CreateBookingRequest.cs",
               "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture1\\Application\\DTOs\\CreateBookingRequest.cs",
               "RelativeDocumentMoniker": "Application\\DTOs\\CreateBookingRequest.cs",
@@ -344,151 +249,112 @@
               "RelativeToolTip": "Application\\DTOs\\CreateBookingRequest.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-05T07:53:32.303Z"
+              "WhenOpened": "2026-06-08T10:14:00.897Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "RegisterRequest.cs",
-              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture1\\Application\\DTOs\\RegisterRequest.cs",
-              "RelativeDocumentMoniker": "Application\\DTOs\\RegisterRequest.cs",
-              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture1\\Application\\DTOs\\RegisterRequest.cs",
-              "RelativeToolTip": "Application\\DTOs\\RegisterRequest.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAFAAAAAAAAAA==",
+              "DocumentIndex": 7,
+              "Title": "IBookingService.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture1\\Application\\Interfaces\\IBookingService.cs",
+              "RelativeDocumentMoniker": "Application\\Interfaces\\IBookingService.cs",
+              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture1\\Application\\Interfaces\\IBookingService.cs",
+              "RelativeToolTip": "Application\\Interfaces\\IBookingService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-05T07:51:16.779Z"
+              "WhenOpened": "2026-06-08T09:56:06.06Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "HotelImageConfiguration.cs",
-              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture1\\Infrastructure\\Persistence\\Configurations\\HotelImageConfiguration.cs",
-              "RelativeDocumentMoniker": "Infrastructure\\Persistence\\Configurations\\HotelImageConfiguration.cs",
-              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture1\\Infrastructure\\Persistence\\Configurations\\HotelImageConfiguration.cs",
-              "RelativeToolTip": "Infrastructure\\Persistence\\Configurations\\HotelImageConfiguration.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACEAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 11,
+              "Title": "BookingStatus.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture1\\Domain\\Enums\\BookingStatus.cs",
+              "RelativeDocumentMoniker": "Domain\\Enums\\BookingStatus.cs",
+              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture1\\Domain\\Enums\\BookingStatus.cs",
+              "RelativeToolTip": "Domain\\Enums\\BookingStatus.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-05T06:31:21.01Z"
+              "WhenOpened": "2026-06-08T09:56:03.157Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "RoomTypeService.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture1\\Infrastructure\\Services\\RoomTypeService.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Services\\RoomTypeService.cs",
+              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture1\\Infrastructure\\Services\\RoomTypeService.cs",
+              "RelativeToolTip": "Infrastructure\\Services\\RoomTypeService.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAQwDQAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-08T09:55:18.266Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 16,
-              "Title": "HotelService.cs",
-              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture1\\Infrastructure\\Services\\HotelService.cs",
-              "RelativeDocumentMoniker": "Infrastructure\\Services\\HotelService.cs",
-              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture1\\Infrastructure\\Services\\HotelService.cs",
-              "RelativeToolTip": "Infrastructure\\Services\\HotelService.cs",
-              "ViewState": "AgIAACUAAAAAAAAAAAAowE0AAAApAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-04T08:04:18.003Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "BookingDetail.cs",
-              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture1\\Domain\\Entities\\BookingDetail.cs",
-              "RelativeDocumentMoniker": "Domain\\Entities\\BookingDetail.cs",
-              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture1\\Domain\\Entities\\BookingDetail.cs",
-              "RelativeToolTip": "Domain\\Entities\\BookingDetail.cs",
+              "Title": "IRoomTypeService.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture1\\Application\\Interfaces\\IRoomTypeService.cs",
+              "RelativeDocumentMoniker": "Application\\Interfaces\\IRoomTypeService.cs",
+              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture1\\Application\\Interfaces\\IRoomTypeService.cs",
+              "RelativeToolTip": "Application\\Interfaces\\IRoomTypeService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-05T06:29:40.726Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "BookingController.cs",
-              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture1\\WebAPI\\Controllers\\BookingController.cs",
-              "RelativeDocumentMoniker": "WebAPI\\Controllers\\BookingController.cs",
-              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture1\\WebAPI\\Controllers\\BookingController.cs",
-              "RelativeToolTip": "WebAPI\\Controllers\\BookingController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-05T06:13:24.022Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "HotelImage.cs",
-              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture1\\Domain\\Entities\\HotelImage.cs",
-              "RelativeDocumentMoniker": "Domain\\Entities\\HotelImage.cs",
-              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture1\\Domain\\Entities\\HotelImage.cs",
-              "RelativeToolTip": "Domain\\Entities\\HotelImage.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwBQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-05T06:11:39.602Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "Hotel.cs",
-              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture1\\Domain\\Entities\\Hotel.cs",
-              "RelativeDocumentMoniker": "Domain\\Entities\\Hotel.cs",
-              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture1\\Domain\\Entities\\Hotel.cs",
-              "RelativeToolTip": "Domain\\Entities\\Hotel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAlAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-05T06:11:27.103Z"
+              "WhenOpened": "2026-06-08T09:54:54.147Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 19,
-              "Title": "CreateHotelRequest.cs",
-              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture1\\Application\\DTOs\\CreateHotelRequest.cs",
-              "RelativeDocumentMoniker": "Application\\DTOs\\CreateHotelRequest.cs",
-              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture1\\Application\\DTOs\\CreateHotelRequest.cs",
-              "RelativeToolTip": "Application\\DTOs\\CreateHotelRequest.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
+              "Title": "RoomType.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture1\\Application\\DTOs\\RoomType.cs",
+              "RelativeDocumentMoniker": "Application\\DTOs\\RoomType.cs",
+              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture1\\Application\\DTOs\\RoomType.cs",
+              "RelativeToolTip": "Application\\DTOs\\RoomType.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-05T05:56:22.095Z"
+              "WhenOpened": "2026-06-08T09:53:17.45Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "Getallhotel.cs",
-              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture1\\Application\\DTOs\\Getallhotel.cs",
-              "RelativeDocumentMoniker": "Application\\DTOs\\Getallhotel.cs",
-              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture1\\Application\\DTOs\\Getallhotel.cs",
-              "RelativeToolTip": "Application\\DTOs\\Getallhotel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAsAAAAAAAAAA==",
+              "DocumentIndex": 17,
+              "Title": "RoomResponse.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture1\\Application\\DTOs\\RoomResponse.cs",
+              "RelativeDocumentMoniker": "Application\\DTOs\\RoomResponse.cs",
+              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture1\\Application\\DTOs\\RoomResponse.cs",
+              "RelativeToolTip": "Application\\DTOs\\RoomResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-05T06:40:21.038Z"
+              "WhenOpened": "2026-06-08T09:53:15.962Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
-              "Title": "BookingService.cs",
-              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture1\\Infrastructure\\Services\\BookingService.cs",
-              "RelativeDocumentMoniker": "Infrastructure\\Services\\BookingService.cs",
-              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture1\\Infrastructure\\Services\\BookingService.cs",
-              "RelativeToolTip": "Infrastructure\\Services\\BookingService.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 18,
+              "Title": "RoomRequestDTOS.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture1\\Application\\DTOs\\RoomRequestDTOS.cs",
+              "RelativeDocumentMoniker": "Application\\DTOs\\RoomRequestDTOS.cs",
+              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture1\\Application\\DTOs\\RoomRequestDTOS.cs",
+              "RelativeToolTip": "Application\\DTOs\\RoomRequestDTOS.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAwwCEAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-05T05:56:35.649Z"
+              "WhenOpened": "2026-06-08T09:53:05.446Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
-              "Title": "BaseEntity.cs",
-              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture1\\Domain\\Common\\BaseEntity.cs",
-              "RelativeDocumentMoniker": "Domain\\Common\\BaseEntity.cs",
-              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture1\\Domain\\Common\\BaseEntity.cs",
-              "RelativeToolTip": "Domain\\Common\\BaseEntity.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 15,
+              "Title": "RoomConfiguration.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture1\\Infrastructure\\Persistence\\Configurations\\RoomConfiguration.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Persistence\\Configurations\\RoomConfiguration.cs",
+              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture1\\Infrastructure\\Persistence\\Configurations\\RoomConfiguration.cs",
+              "RelativeToolTip": "Infrastructure\\Persistence\\Configurations\\RoomConfiguration.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-04T08:00:24.274Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 27,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture1\\WebAPI\\Program.cs",
-              "RelativeDocumentMoniker": "WebAPI\\Program.cs",
-              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture1\\WebAPI\\Program.cs",
-              "RelativeToolTip": "WebAPI\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-04T07:20:45.399Z"
+              "WhenOpened": "2026-06-08T09:52:54.023Z",
+              "EditorCaption": ""
             }
           ]
         }

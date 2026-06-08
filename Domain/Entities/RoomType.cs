@@ -13,9 +13,7 @@ namespace Domain.Entities
 
         public string Name { get; set; }
 
-        public decimal PricePerNight { get; set; }
-
-        public int MaxGuests { get; set; }
+     
 
         public Hotel Hotel { get; set; }
 

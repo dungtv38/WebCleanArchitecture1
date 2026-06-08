@@ -20,6 +20,8 @@ namespace Domain.Entities
 
 
         public string? Note { get; set; }
+        public decimal PricePerNight { get; set; }
+        public int MaxGuests { get; set; }
 
         public RoomType RoomType { get; set; } = default!;
         public ICollection<BookingDetail> BookingDetails { get; set; } = new List<BookingDetail>();
