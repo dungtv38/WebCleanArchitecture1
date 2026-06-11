@@ -5,7 +5,7 @@ import api from "../components/layout/api";
 import Header from "../components/layout/Header";
 import Footer from "../components/layout/Footer";
 
-// Định nghĩa Interface dữ liệu phòng nhận về từ API công khai của bạn
+// Định nghĩa Interface dữ liệu phòng nhận về từ API
 interface RoomDetailDTO {
     id: string;
     roomNumber: string;
@@ -18,11 +18,11 @@ export default function Booking() {
     const [searchParams] = useSearchParams();
     const navigate = useNavigate();
     
-    // Lấy thông tin ID từ URL query (?hotelId=...&roomId=...)
-    const hotelId = searchParams.get("hotelId");
-    const roomId = searchParams.get("roomId");
+    // Đọc tham số URL chấp nhận cả viết hoa lẫn viết thường để tránh bị rỗng (null) dữ liệu
+    const hotelId = searchParams.get("hotelId") || searchParams.get("HotelId");
+    const roomId = searchParams.get("roomId") || searchParams.get("RoomId");
 
-    // Các State quản lý dữ liệu
+    // Các State quản lý dữ liệu giao diện
     const [roomInfo, setRoomInfo] = useState<RoomDetailDTO | null>(null);
     const [loading, setLoading] = useState(true);
     const [checkIn, setCheckIn] = useState("");
@@ -30,21 +30,32 @@ export default function Booking() {
     const [errorMessage, setErrorMessage] = useState("");
     const [isSubmitting, setIsSubmitting] = useState(false);
 
-    // 1. Gọi API lấy chi tiết căn phòng cụ thể để lấy giá tiền và số phòng
+    // 1. Gọi API lấy chi tiết căn phòng cụ thể
     useEffect(() => {
         const fetchRoomDetail = async () => {
             if (!roomId) {
-                setErrorMessage("Không tìm thấy mã phòng hợp lệ.");
+                setErrorMessage("⚠️ Không tìm thấy mã phòng (roomId) trên URL.");
                 setLoading(false);
                 return;
             }
+
             try {
-                // Bạn hãy đảm bảo Backend có API endpoint này (VD: /api/rooms/{id})
-                const response = await api.get<RoomDetailDTO>(`/rooms/${roomId}`);
-                setRoomInfo(response.data);
-            } catch (error) {
-                console.error("Lỗi lấy thông tin phòng:", error);
-                setErrorMessage("Không thể tải thông tin phòng. Vui lòng thử lại!");
+                setLoading(true);
+                setErrorMessage(""); 
+
+                // Gọi API lấy thông tin phòng chi tiết
+                const response = await api.get<RoomDetailDTO>(`/Rooms/type/${roomId}`);
+                console.log("Dữ liệu thực tế nhận về từ API:", response.data);
+
+                if (response.data) {
+                    setRoomInfo(response.data);
+                } else {
+                    setErrorMessage("⚠️ Không có dữ liệu trả về cho phòng này.");
+                }
+            } catch (error: any) {
+                console.error("Lỗi API Rooms:", error);
+                const serverMessage = error.response?.data?.message || error.message;
+                setErrorMessage(`❌ Không thể tải thông tin phòng. Lỗi: ${serverMessage}`);
             } finally {
                 setLoading(false);
             }
@@ -59,7 +70,7 @@ export default function Booking() {
         const date1 = new Date(checkIn);
         const date2 = new Date(checkOut);
         
-        // Trừ mili-giây và đổi ra số ngày
+        // Trừ mili-giây và đổi ra số ngày lưu trú
         const diffTime = date2.getTime() - date1.getTime();
         const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
         
@@ -73,6 +84,11 @@ export default function Booking() {
     const handleConfirmBooking = async () => {
         setErrorMessage("");
         
+        if (!hotelId || !roomId) {
+            setErrorMessage("❌ Lỗi hệ thống: Thiếu mã khách sạn hoặc mã phòng trên đường dẫn URL.");
+            return;
+        }
+
         if (!checkIn || !checkOut) {
             setErrorMessage("⚠️ Vui lòng chọn đầy đủ ngày nhận và ngày trả phòng.");
             return;
@@ -85,29 +101,45 @@ export default function Booking() {
 
         setIsSubmitting(true);
         try {
-            // Cấu trúc Request Body chuẩn hóa khớp 100% với CreateBookingRequest ở Backend của bạn
+            // Truyền chuỗi ngày YYYY-MM-DD trực tiếp, không bọc .toISOString() để tránh lệch múi giờ
             const requestBody = {
                 hotelId: hotelId,
-                roomIds: [roomId], // Bỏ ID phòng vào mảng theo dạng List<Guid>
-                checkIn: new Date(checkIn).toISOString(),
-                checkOut: new Date(checkOut).toISOString()
+                roomIds: [roomId], 
+                checkIn: checkIn,
+                checkOut: checkOut
             };
 
-            await api.post("/booking", requestBody);
+            console.log("Dữ liệu UI gửi lên API đặt phòng:", requestBody);
+
+            // Gửi dữ liệu lên API endpoint
+            const response = await api.post("/booking", requestBody);
             
-            alert("🎉 Đặt phòng thành công! Đơn hàng của bạn đang chờ xử lý.");
-            navigate("/my-bookings"); // Chuyển hướng sang trang lịch sử đặt phòng của User
+            alert("🎉 Đặt phòng thành công! Hệ thống đang chuyển hướng tới trang thanh toán.");
+            
+            // Điều hướng sang trang thanh toán dựa trên ID đơn hàng trả về từ Backend
+            navigate(`/payment/${response.data.id}`); 
         } catch (error: any) {
-            console.error("Lỗi đặt phòng:", error);
-            // Hiển thị câu báo lỗi (Ví dụ lỗi 400: Phòng đã được đặt) từ Backend trả về
-            setErrorMessage(error.response?.data?.message || "Đã xảy ra lỗi hệ thống khi đặt phòng.");
+            console.error("Lỗi đặt phòng từ giao diện:", error);
+            
+            // Bắt câu báo lỗi chi tiết từ backend (như lỗi CORS, 401 hoặc lỗi trùng lịch)
+            const backendMessage = error.response?.data?.message;
+            if (error.response?.status === 401) {
+                setErrorMessage("❌ Lỗi 401: Bạn chưa đăng nhập hoặc Token đã hết hạn. Vui lòng đăng nhập lại.");
+            } else {
+                setErrorMessage(backendMessage || "Đã xảy ra lỗi kết nối với hệ thống Backend (CORS/Network Error).");
+            }
         } finally {
             setIsSubmitting(false);
         }
     };
 
-    // Lấy ngày hiện tại định dạng YYYY-MM-DD để chặn khách chọn ngày trong quá khứ
-    const todayStr = new Date().toISOString().split("T")[0];
+    // Lấy ngày hiện tại định dạng YYYY-MM-DD để chặn khách chọn ngày trong quá khứ trên giao diện lịch
+    const todayStr = useMemo(() => {
+        const d = new Date();
+        const month = String(d.getMonth() + 1).padStart(2, '0');
+        const day = String(d.getDate()).padStart(2, '0');
+        return `${d.getFullYear()}-${month}-${day}`;
+    }, []);
 
     if (loading) {
         return (

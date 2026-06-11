@@ -35,7 +35,6 @@ namespace API.Controllers
                 // Chạy logic lưu DB thành công
                 var booking = await _bookingService.CreateAsync(userId, request);
 
-                // 🌟 SỬA TẠI ĐÂY: Tạo Object DTO ẩn danh (hoặc DTO class cụ thể) để trả về phẳng, cắt đứt vòng lặp
                 var resultDto = new
                 {
                     Id = booking.Id,

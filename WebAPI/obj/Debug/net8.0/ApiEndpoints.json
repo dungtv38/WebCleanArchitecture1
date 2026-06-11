@@ -147,6 +147,22 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "WebApi.Controllers.PaymentsController",
+    "Method": "ProcessPayment",
+    "RelativePath": "api/Payments/process",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Application.DTOs.ProcessPaymentRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "WebApi.Controllers.RoomsController",
     "Method": "Create",
     "RelativePath": "api/Rooms",
