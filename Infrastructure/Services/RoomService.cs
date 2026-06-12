@@ -94,13 +94,25 @@ namespace Infrastructure.Services
             return true;
         }
 
-        public async Task<Room> GetByRoomTypeIdAsync(Guid roomId)
+        public async Task<RoomResponse?> GetByRoomTypeIdAsync(Guid roomId)
         {
             return await _context.Rooms
-         .Include(r => r.Images) 
-         .FirstOrDefaultAsync(r => r.Id == roomId);
-        }
+                .Where(r => r.Id == roomId)
+                .Select(r => new RoomResponse
+                {
+                    Id = r.Id,
+                    RoomTypeId = r.RoomTypeId,
+                    RoomNumber = r.RoomNumber,
+                    Note = r.Note,
+                    Status = r.Status.ToString(), // Nếu Status ở Entity là Enum thì thêm .ToString()
+                    PricePerNight = r.PricePerNight,
+                    MaxGuests = r.MaxGuests,
 
+                    // Map danh sách ảnh thành danh sách chuỗi URL, triệt tiêu hoàn toàn Object Cycle
+                    Images = r.Images.Select(img => img.ImageUrl).ToList()
+                })
+                .FirstOrDefaultAsync();
+        }
         public async Task<bool> UpdateAsync(Guid roomId, UpdateRoomRequest request)
         {
             var room = await _context.Rooms

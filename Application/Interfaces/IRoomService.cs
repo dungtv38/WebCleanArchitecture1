@@ -11,7 +11,7 @@ namespace Application.Interfaces
     public interface IRoomService
     {
         Task<RoomResponse> CreateAsync(CreateRoomRequest request);
-        Task<Room> GetByRoomTypeIdAsync(Guid roomId
+        Task<RoomResponse> GetByRoomTypeIdAsync(Guid roomId
             );
         Task<bool> UpdateStatusAsync(Guid roomId, RoomStatus status);
         Task<bool> DeleteAsync(Guid roomId);
