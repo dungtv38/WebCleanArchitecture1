@@ -10,6 +10,7 @@ namespace Application.Interfaces
 {
     public interface IPaymentService
     {
-        Task<Payment> ProcessPaymentAsync(ProcessPaymentRequest request);
+        // Thay đổi kiểu trả về từ Task<Payment> thành Task<string>
+        Task<string> CreatePaymentUrlAsync(Guid bookingId, string paymentMethod, string ipAddress);
     }
 }

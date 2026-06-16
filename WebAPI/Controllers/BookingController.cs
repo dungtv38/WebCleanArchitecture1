@@ -2,12 +2,16 @@
 using Application.Interfaces;
 using Domain.Entities;
 using Domain.Enums;
+using Infrastructure.Common; // Đảm bảo bạn đã tạo class Utils trong này hoặc sửa namespace cho đúng
 using Infrastructure.Persistence;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Security.Claims;
+using System.Text;
 using System.Threading.Tasks;
 
 namespace API.Controllers
@@ -17,14 +21,15 @@ namespace API.Controllers
     public class BookingController : ControllerBase
     {
         private readonly IBookingService _bookingService;
+        private readonly IPaymentService _paymentService; // Thêm Service xử lý thanh toán
         private readonly AppDbContext _context;
-        public BookingController(AppDbContext context, IBookingService bookingService)
+
+        public BookingController(AppDbContext context, IBookingService bookingService, IPaymentService paymentService)
         {
             _context = context;
             _bookingService = bookingService;
+            _paymentService = paymentService; // Khởi tạo Service thanh toán
         }
-
-
 
         [Authorize]
         [HttpPost]
@@ -32,7 +37,7 @@ namespace API.Controllers
         {
             try
             {
-                var userIdClaim = User.FindFirst(System.Security.Claims.ClaimTypes.NameIdentifier)?.Value
+                var userIdClaim = User.FindFirst(ClaimTypes.NameIdentifier)?.Value
                                   ?? User.FindFirst("id")?.Value;
 
                 if (string.IsNullOrEmpty(userIdClaim))
@@ -40,7 +45,7 @@ namespace API.Controllers
 
                 Guid userId = Guid.Parse(userIdClaim);
 
-                // Chạy logic lưu DB thành công
+                // Gọi Service xử lý logic lưu DB chính xác đã được tính toán tiền an toàn
                 var booking = await _bookingService.CreateAsync(userId, request);
 
                 var resultDto = new
@@ -52,7 +57,6 @@ namespace API.Controllers
                     TotalAmount = booking.TotalAmount,
                     Status = booking.Status.ToString(),
                     CreatedAt = booking.CreatedAt,
-                    // Chỉ lấy các thông tin phòng cần thiết, tuyệt đối không chấm ngược lại .Booking
                     Rooms = booking.BookingDetails.Select(bd => new {
                         RoomId = bd.RoomId,
                         Nights = bd.Nights,
@@ -60,7 +64,6 @@ namespace API.Controllers
                     }).ToList()
                 };
 
-                // Trả về DTO đã bóc tách sạch sẽ
                 return Ok(resultDto);
             }
             catch (Exception ex)
@@ -68,16 +71,16 @@ namespace API.Controllers
                 return BadRequest(new { message = ex.Message });
             }
         }
+
         [Authorize]
         [HttpGet("detail/{id}")]
         public async Task<IActionResult> GetBookingDetail(Guid id)
         {
-          
             var booking = await _context.Bookings
-          .Include(b => b.Hotel) 
-          .Include(b => b.BookingDetails) 
-              .ThenInclude(d => d.Room)   
-          .FirstOrDefaultAsync(b => b.Id == id);
+                .Include(b => b.Hotel)
+                .Include(b => b.BookingDetails)
+                    .ThenInclude(d => d.Room)
+                .FirstOrDefaultAsync(b => b.Id == id);
 
             if (booking == null)
             {
@@ -89,26 +92,23 @@ namespace API.Controllers
             {
                 Id = booking.Id,
                 HotelName = booking.Hotel?.Name ?? "Khách sạn hệ thống",
-                RoomName = detailLine?.Room?.Note ?? "Phòng tiêu chuẩn", 
-                PricePerNight = detailLine?.PricePerNight ?? 0,        
-                Nights = detailLine?.Nights ?? 0,                       
+                RoomName = detailLine?.Room?.Note ?? "Phòng tiêu chuẩn",
+                PricePerNight = detailLine?.PricePerNight ?? 0,
+                Nights = detailLine?.Nights ?? 0,
                 CheckIn = booking.CheckIn,
                 CheckOut = booking.CheckOut,
                 TotalAmount = booking.TotalAmount,
                 Status = booking.Status,
-              
                 CreatedAt = booking.CreatedAt
             };
 
             return Ok(detail);
         }
+
         [HttpGet("{id}")]
         public async Task<IActionResult> GetBookingDetailForPayment(Guid id)
         {
-            // Tìm đơn đặt phòng kèm theo thông tin phòng để lấy giá tiền
             var booking = await _context.Bookings
-                .Include(b => b.BookingDetails)
-                    .ThenInclude(br => br.Room)
                 .FirstOrDefaultAsync(b => b.Id == id);
 
             if (booking == null)
@@ -116,74 +116,141 @@ namespace API.Controllers
                 return NotFound(new { message = "❌ Không tìm thấy đơn đặt phòng hợp lệ." });
             }
 
-            // Tính toán số đêm lưu trú
-            int totalNights = (booking.CheckOut - booking.CheckIn).Days;
-            if (totalNights <= 0) totalNights = 1; // Đảm bảo tối thiểu tính giá 1 đêm
-
-            // Tính tổng tiền bằng cách cộng giá của tất cả các phòng đã chọn trong đơn hàng
-            decimal totalAmount = booking.BookingDetails.Sum(br => br.Room.PricePerNight) * totalNights;
-
-            // Trả về dữ liệu phẳng sạch sẽ cho Frontend React dễ dùng
+            // Sửa lại: Lấy trực tiếp TotalAmount từ DB, không tính toán lại ở đây
             var response = new
             {
                 Id = booking.Id,
                 HotelId = booking.HotelId,
                 CheckIn = booking.CheckIn,
                 CheckOut = booking.CheckOut,
-                TotalAmount = totalAmount,
-                Status = booking.Status.ToString() // Trả về dạng chuỗi: "Pending", "Success",...
+                TotalAmount = booking.TotalAmount,
+                Status = booking.Status.ToString()
             };
 
             return Ok(response);
         }
-        [HttpPost("process")]
+
+        /// <summary>
+        /// API Xử lý yêu cầu thanh toán (Sinh link VNPAY trực tuyến hoặc chốt thu ngân tại quầy)
+        /// </summary>
+        [HttpPost("process-payment")]
         public async Task<IActionResult> ProcessPayment([FromBody] PaymentRequest request)
         {
-            // 1. Tìm đơn đặt phòng tương ứng dưới Database
-            var booking = await _context.Bookings.FirstOrDefaultAsync(b => b.Id == request.BookingId);
-            if (booking == null)
+            try
             {
-                return NotFound(new { message = "Không tìm thấy đơn đặt phòng tương ứng." });
+                // Lấy địa chỉ IP của Client gửi yêu cầu thanh toán để truyền sang VNPAY chống gian lận
+                string ipAddress = HttpContext.Connection.RemoteIpAddress?.ToString() ?? "127.0.0.1";
+
+                // Gọi PaymentService để thực hiện logic sinh URL VNPAY hoặc thanh toán tiền mặt trực tiếp
+                string result = await _paymentService.CreatePaymentUrlAsync(request.BookingId, request.PaymentMethod, ipAddress);
+
+                if (result == "COUNTER_SUCCESS")
+                {
+                    return Ok(new { message = "Đặt phòng và thanh toán trực tiếp tại quầy thành công!", paymentMethod = "COUNTER" });
+                }
+
+                // Trả về chuỗi URL dẫn sang trang thanh toán VNPAY Sandbox cho Client
+                return Ok(new { paymentUrl = result, paymentMethod = "VNPAY" });
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(new { message = ex.Message });
+            }
+        }
+
+        /// <summary>
+        /// API Webhook (IPN URL) - Cổng VNPAY sẽ tự động gọi ngầm tới endpoint này để trả kết quả thanh toán thực tế
+        /// </summary>
+        [HttpGet("vnpay-ipn")]
+        public async Task<IActionResult> VnpayIpn()
+        {
+            string vnp_HashSecret = "YOUR_HASH_SECRET_HERE"; // Thay chuỗi Secret Key VNPAY của bạn vào đây
+            var queries = Request.Query;
+
+            // 1. Xác thực tính toàn vẹn dữ liệu (Kiểm tra chữ ký SecureHash của VNPAY)
+            var vnpayData = new SortedList<string, string>(StringComparer.Ordinal);
+            string vnp_SecureHash = queries["vnp_SecureHash"]!;
+
+            foreach (var key in queries.Keys)
+            {
+                if (!string.IsNullOrEmpty(key) && key.StartsWith("vnp_") && key != "vnp_SecureHash")
+                {
+                    vnpayData.Add(key, queries[key]!);
+                }
             }
 
-            // 2. Cập nhật trạng thái từ Pending (0) sang Confirmed (1) dựa theo Enum của bạn
-            booking.Status = BookingStatus.Confirmed;
-
-            // 3. Tạo một bản ghi hóa đơn mới lưu vào bảng Payments để lưu vết lịch sử giao dịch
-            var payment = new Payment
+            var stringToHash = new StringBuilder();
+            foreach (var kv in vnpayData)
             {
-                Id = Guid.NewGuid(),
-                BookingId = booking.Id,
-                PaymentMethod = request.PaymentMethod, // Nhận từ body lên (ví dụ: "vietqr")
-                Status = Domain.Enums.PaymentStatus.Success,
-                CreatedAt = DateTime.UtcNow
-            };
+                stringToHash.Append(kv.Key + "=" + Uri.EscapeDataString(kv.Value) + "&");
+            }
+            if (stringToHash.Length > 0) stringToHash.Remove(stringToHash.Length - 1, 1);
 
-            _context.Payments.Add(payment);
+            string checkHash = Utils.HmacSHA512(vnp_HashSecret, stringToHash.ToString());
 
-            // 4. Lưu đồng thời thay đổi của cả 2 bảng xuống SQL Server
-            await _context.SaveChangesAsync();
-
-            return Ok(new
+            if (checkHash != vnp_SecureHash)
             {
-                message = "Thanh toán qua cổng trực tuyến thành công!",
-                paymentId = payment.Id,
-                status = "Success"
-            });
+                return Ok(new { RspCode = "97", Message = "Invalid Signature" });
+            }
+
+            // 2. Phân tích kết quả thanh toán từ các tham số
+            Guid bookingId = Guid.Parse(queries["vnp_TxnRef"]!);
+            string responseCode = queries["vnp_ResponseCode"]!; // Mã "00" đại diện cho thành công
+            string transactionNo = queries["vnp_TransactionNo"]!; // Mã giao dịch của VNPAY
+            decimal amount = decimal.Parse(queries["vnp_Amount"]!) / 100; // Chia lại cho 100 để về đúng số tiền VND
+
+            // 3. Tìm kiếm đơn đặt phòng từ DB để đối soát thông tin
+            var booking = await _context.Bookings.FirstOrDefaultAsync(b => b.Id == bookingId);
+            if (booking == null)
+                return Ok(new { RspCode = "01", Message = "Order not found" });
+
+            if (booking.Status != BookingStatus.Pending)
+                return Ok(new { RspCode = "02", Message = "Order already confirmed or processed" });
+
+            // 4. Cập nhật trạng thái Booking và ghi nhận thông tin hóa đơn Payment
+            if (responseCode == "00")
+            {
+                booking.Status = BookingStatus.Confirmed;
+
+                var payment = new Payment
+                {
+                    Id = Guid.NewGuid(),
+                    BookingId = booking.Id,
+                    Amount = amount,
+                    Status = PaymentStatus.Success,
+                    PaymentMethod = "VNPAY",
+                    TransactionCode = transactionNo,
+                    CreatedAt = DateTime.UtcNow
+                };
+
+                payment.PaymentDetails.Add(new PaymentDetail
+                {
+                    Id = Guid.NewGuid(),
+                    PaymentId = payment.Id,
+                    ItemName = $"Thanh toan online hoa don dat phong khach san: {booking.Id}",
+                    Amount = amount,
+                    CreatedAt = DateTime.UtcNow
+                });
+
+                _context.Payments.Add(payment);
+                await _context.SaveChangesAsync();
+            }
+            else
+            {
+                // Xử lý khi giao dịch thất bại hoặc người dùng chủ động hủy giao dịch trên trang thanh toán
+                booking.Status = BookingStatus.Cancelled;
+                await _context.SaveChangesAsync();
+            }
+
+            // Trả về cấu hình định dạng phản hồi Json theo quy định tài liệu VNPAY
+            return Ok(new { RspCode = "00", Message = "Confirm Success" });
         }
 
-        // Lớp DTO nhận dữ liệu body truyền lên từ Swagger/React gửi sang
-        public class PaymentRequest
-        {
-            public Guid BookingId { get; set; }
-            public string PaymentMethod { get; set; } = default!;
-        }
         [HttpGet("my-history")]
-        [Authorize] // Ép buộc phải có Token JWT hợp lệ gửi kèm trên Header mới cho vào
+        [Authorize]
         public async Task<IActionResult> GetMyBookingHistory()
         {
-            // Tìm UserId nằm ẩn trong các Claim của Token JWT gửi từ React lên
-            var userIdClaim = User.FindFirst(System.Security.Claims.ClaimTypes.NameIdentifier);
+            var userIdClaim = User.FindFirst(ClaimTypes.NameIdentifier);
             if (userIdClaim == null)
             {
                 return Unauthorized(new { message = "Vui lòng đăng nhập lại hệ thống." });
@@ -191,21 +258,26 @@ namespace API.Controllers
 
             Guid userId = Guid.Parse(userIdClaim.Value);
 
-            // Lấy toàn bộ danh sách đơn hàng của riêng User này xếp từ mới nhất xuống cũ nhất
             var history = await _context.Bookings
                 .Where(b => b.UserId == userId)
-                .OrderByDescending(b => b.Id) // Hoặc CreatedAt nếu bảng của bạn có cột thời gian tạo
+                .OrderByDescending(b => b.CreatedAt) // Sắp xếp theo ngày tạo đơn mới nhất xuống cũ nhất
                 .Select(b => new {
                     b.Id,
                     b.CheckIn,
                     b.CheckOut,
+                    b.TotalAmount,
                     Status = b.Status.ToString()
                 })
                 .ToListAsync();
 
             return Ok(history);
         }
+    }
 
-
+    // Định dạng DTO nhận yêu cầu xử lý từ giao diện client đưa lên
+    public class PaymentRequest
+    {
+        public Guid BookingId { get; set; }
+        public string PaymentMethod { get; set; } = "VNPAY";
     }
 }

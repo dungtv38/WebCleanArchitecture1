@@ -2,10 +2,13 @@
 using Application.Interfaces;
 using Domain.Entities;
 using Domain.Enums;
+using Infrastructure.Common;
 using Infrastructure.Persistence;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
 
 namespace Infrastructure.Services
@@ -19,11 +22,11 @@ namespace Infrastructure.Services
             _context = context;
         }
 
-        public async Task<Payment> ProcessPaymentAsync(ProcessPaymentRequest request)
+        public async Task<string> CreatePaymentUrlAsync(Guid bookingId, string paymentMethod, string ipAddress)
         {
-            // 1. Kiểm tra đơn đặt phòng (Booking) có tồn tại không
+            // 1. Kiểm tra đơn đặt phòng
             var booking = await _context.Bookings
-                .FirstOrDefaultAsync(b => b.Id == request.BookingId);
+                .FirstOrDefaultAsync(b => b.Id == bookingId);
 
             if (booking == null)
                 throw new Exception("Đơn đặt phòng không tồn tại.");
@@ -31,71 +34,84 @@ namespace Infrastructure.Services
             if (booking.Status == BookingStatus.Cancelled)
                 throw new Exception("Đơn đặt phòng này đã bị hủy, không thể thanh toán.");
 
-            // Bọc bằng Transaction để đảm bảo an toàn dữ liệu khi lưu cả Payment và Update Booking
-            using var transaction = await _context.Database.BeginTransactionAsync();
+            if (booking.Status == BookingStatus.Confirmed)
+                throw new Exception("Đơn đặt phòng này đã được xác nhận thanh toán trước đó.");
 
-            try
+            // 2. Nếu thanh toán tại quầy (COUNTER) - Xử lý đóng gói luồng luôn
+            if (paymentMethod.ToUpper() == "COUNTER")
             {
-                // 2. Khởi tạo bản ghi Payment khớp 100% với thuộc tính thực thể
-                var payment = new Payment
+                using var transaction = await _context.Database.BeginTransactionAsync();
+                try
                 {
-                    Id = Guid.NewGuid(),
-                    BookingId = booking.Id,
-                    Amount = booking.TotalAmount,
-                    PaymentMethod = request.PaymentMethod,
-                    TransactionCode = request.PaymentMethod.ToUpper() == "COUNTER"
-                        ? $"CASH-{Guid.NewGuid().ToString().Substring(0, 8).ToUpper()}"
-                        : $"ONLINE-{Guid.NewGuid().ToString().Substring(0, 8).ToUpper()}",
-                    CreatedAt = DateTime.UtcNow,
-                    UpdatedAt = DateTime.UtcNow,
-                    PaymentDetails = new List<PaymentDetail>()
-                };
+                    booking.Status = BookingStatus.Confirmed; // Hoặc cứ để Pending tùy quy trình vận hành thực tế
 
-                // 3. Xử lý logic trạng thái (Khớp hoàn toàn với Enum PaymentStatus của bạn)
-                if (request.PaymentMethod.ToUpper() == "COUNTER")
-                {
-                    // Thanh toán tại quầy: Trạng thái Payment thu tiền mặt là Pending (0)
-                    payment.Status = PaymentStatus.Pending;
-                    booking.Status = BookingStatus.Pending;
+                    var cashPayment = new Payment
+                    {
+                        Id = Guid.NewGuid(),
+                        BookingId = booking.Id,
+                        Amount = booking.TotalAmount,
+                        Status = PaymentStatus.Success,
+                        PaymentMethod = "COUNTER",
+                        TransactionCode = $"CASH-{Guid.NewGuid().ToString().Substring(0, 8).ToUpper()}",
+                        CreatedAt = DateTime.UtcNow
+                    };
+
+                    _context.Payments.Add(cashPayment);
+                    await _context.SaveChangesAsync();
+                    await transaction.CommitAsync();
+
+                    return "COUNTER_SUCCESS";
                 }
-                else
+                catch (Exception)
                 {
-                    // Giả lập thanh toán qua cổng trực tuyến thành công: Trạng thái là Success (1)
-                    payment.Status = PaymentStatus.Success;
-                    booking.Status = BookingStatus.Confirmed; 
+                    await transaction.RollbackAsync();
+                    throw;
                 }
-
-                // 4. Lưu dữ liệu chi tiết vào bảng PaymentDetail
-                payment.PaymentDetails.Add(new PaymentDetail
-                {
-                    Id = Guid.NewGuid(),
-                    PaymentId = payment.Id,
-                    ItemName = $"Thanh toán tiền đặt phòng cho đơn hàng {booking.Id.ToString().Substring(0, 8)}",
-                    Amount = booking.TotalAmount,
-                    CreatedAt = DateTime.UtcNow,
-                    UpdatedAt = DateTime.UtcNow
-                });
-
-                // 5. Thêm mới bản ghi thanh toán và Cập nhật trạng thái phòng đơn đặt
-                _context.Payments.Add(payment);
-                _context.Bookings.Update(booking);
-
-                // Thực hiện lưu thay đổi xuống SQL Server
-                var result = await _context.SaveChangesAsync();
-                if (result == 0)
-                    throw new Exception("Không thể xử lý dữ liệu thanh toán.");
-
-                // Xác nhận giao dịch thành công hoàn toàn
-                await transaction.CommitAsync();
-
-                return payment;
             }
-            catch (Exception)
+
+           
+            string vnp_Url = "https://sandbox.vnpayment.vn/paymentv2/vpcpay.html";
+            string vnp_TmnCode = "YOUR_TMN_CODE_HERE";    
+            string vnp_HashSecret = "YOUR_HASH_SECRET_HERE"; 
+            string vnp_ReturnUrl = "http://localhost:3000/payment-return"; 
+
+            // Lưu ý: VNPAY tính số tiền theo đơn vị đồng nhưng loại bỏ phần thập phân bằng cách nhân 100 
+            // Ví dụ: 100,000 VND -> truyền sang VNPAY phải thành string "10000000"
+            long vnpAmount = (long)(booking.TotalAmount * 100);
+
+            var vnpayData = new SortedList<string, string>(StringComparer.Ordinal)
             {
-                // Hoàn tác dữ liệu nếu có bất kỳ lỗi phát sinh trong khối try
-                await transaction.RollbackAsync();
-                throw;
+                { "vnp_Version", "2.1.0" },
+                { "vnp_Command", "pay" },
+                { "vnp_TmnCode", vnp_TmnCode },
+                { "vnp_Amount", vnpAmount.ToString() },
+                { "vnp_CreateDate", DateTime.Now.ToString("yyyyMMddHHmmss") },
+                { "vnp_CurrCode", "VND" },
+                { "vnp_IpAddr", string.IsNullOrEmpty(ipAddress) ? "127.0.0.1" : ipAddress },
+                { "vnp_Locale", "vn" },
+                { "vnp_OrderInfo", $"Thanh toan don hang {booking.Id}" },
+                { "vnp_OrderType", "other" },
+                { "vnp_ReturnUrl", vnp_ReturnUrl },
+                { "vnp_TxnRef", booking.Id.ToString() } // Dùng luôn Id Đơn hàng làm Mã đối soát tham chiếu
+            };
+
+            // Tiến hành nối chuỗi tham số theo thứ tự Alphabet để tạo mã băm SecureHash
+            var stringToHash = new StringBuilder();
+            var urlBuilder = new StringBuilder(vnp_Url + "?");
+
+            foreach (var kv in vnpayData)
+            {
+                stringToHash.Append(kv.Key + "=" + Uri.EscapeDataString(kv.Value) + "&");
+                urlBuilder.Append(kv.Key + "=" + Uri.EscapeDataString(kv.Value) + "&");
             }
+
+            if (stringToHash.Length > 0) stringToHash.Remove(stringToHash.Length - 1, 1);
+
+            // Băm chuỗi dữ liệu với chuỗi khóa bí mật
+            string vnp_SecureHash = Utils.HmacSHA512(vnp_HashSecret, stringToHash.ToString());
+            urlBuilder.Append("vnp_SecureHash=" + vnp_SecureHash);
+
+            return urlBuilder.ToString();
         }
     }
 }
