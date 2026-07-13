@@ -24,7 +24,7 @@ namespace Infrastructure.Persistence
         public DbSet<Notification> Notifications => Set<Notification>();
         public DbSet<HotelImage> HotelImages => Set<HotelImage>();
         public DbSet<Payment> Payments => Set<Payment>();
-        public DbSet<PaymentDetail> paymentDetails => Set<PaymentDetail>();
+        public DbSet<PaymentDetail> PaymentDetails => Set<PaymentDetail>();
         public DbSet<RoomImage> RoomImages => Set<RoomImage>();
         public DbSet<RefreshToken> RefreshTokens { get; set; }
 

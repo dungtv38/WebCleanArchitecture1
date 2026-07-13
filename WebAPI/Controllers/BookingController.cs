@@ -133,30 +133,30 @@ namespace API.Controllers
         /// <summary>
         /// API Xử lý yêu cầu thanh toán (Sinh link VNPAY trực tuyến hoặc chốt thu ngân tại quầy)
         /// </summary>
-        [HttpPost("process-payment")]
-        public async Task<IActionResult> ProcessPayment([FromBody] PaymentRequest request)
-        {
-            try
-            {
-                // Lấy địa chỉ IP của Client gửi yêu cầu thanh toán để truyền sang VNPAY chống gian lận
-                string ipAddress = HttpContext.Connection.RemoteIpAddress?.ToString() ?? "127.0.0.1";
+        //[HttpPost("process-payment")]
+        //public async Task<IActionResult> ProcessPayment([FromBody] PaymentRequest request)
+        //{
+        //    try
+        //    {
+        //        // Lấy địa chỉ IP của Client gửi yêu cầu thanh toán để truyền sang VNPAY chống gian lận
+        //        string ipAddress = HttpContext.Connection.RemoteIpAddress?.ToString() ?? "127.0.0.1";
 
-                // Gọi PaymentService để thực hiện logic sinh URL VNPAY hoặc thanh toán tiền mặt trực tiếp
-                string result = await _paymentService.CreatePaymentUrlAsync(request.BookingId, request.PaymentMethod, ipAddress);
+        //        // Gọi PaymentService để thực hiện logic sinh URL VNPAY hoặc thanh toán tiền mặt trực tiếp
+        //        string result = await _paymentService.CreatePaymentUrlAsync(request.BookingId, request.PaymentMethod, ipAddress);
 
-                if (result == "COUNTER_SUCCESS")
-                {
-                    return Ok(new { message = "Đặt phòng và thanh toán trực tiếp tại quầy thành công!", paymentMethod = "COUNTER" });
-                }
+        //        if (result == "COUNTER_SUCCESS")
+        //        {
+        //            return Ok(new { message = "Đặt phòng và thanh toán trực tiếp tại quầy thành công!", paymentMethod = "COUNTER" });
+        //        }
 
-                // Trả về chuỗi URL dẫn sang trang thanh toán VNPAY Sandbox cho Client
-                return Ok(new { paymentUrl = result, paymentMethod = "VNPAY" });
-            }
-            catch (Exception ex)
-            {
-                return BadRequest(new { message = ex.Message });
-            }
-        }
+        //        // Trả về chuỗi URL dẫn sang trang thanh toán VNPAY Sandbox cho Client
+        //        return Ok(new { paymentUrl = result, paymentMethod = "VNPAY" });
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        return BadRequest(new { message = ex.Message });
+        //    }
+        //}
 
         /// <summary>
         /// API Webhook (IPN URL) - Cổng VNPAY sẽ tự động gọi ngầm tới endpoint này để trả kết quả thanh toán thực tế

@@ -180,30 +180,11 @@
         }
       }
     },
-    "/api/Booking/process": {
-      "post": {
+    "/api/Booking/vnpay-ipn": {
+      "get": {
         "tags": [
           "Booking"
         ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/PaymentRequest"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/PaymentRequest"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/PaymentRequest"
-              }
-            }
-          }
-        },
         "responses": {
           "200": {
             "description": "OK"
@@ -348,7 +329,7 @@
         }
       }
     },
-    "/api/Payments/process": {
+    "/api/Payments/offline": {
       "post": {
         "tags": [
           "Payments"
@@ -357,17 +338,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/ProcessPaymentRequest"
+                "$ref": "#/components/schemas/CreateOfflinePaymentDto"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/ProcessPaymentRequest"
+                "$ref": "#/components/schemas/CreateOfflinePaymentDto"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/ProcessPaymentRequest"
+                "$ref": "#/components/schemas/CreateOfflinePaymentDto"
               }
             }
           }
@@ -717,6 +698,24 @@
         },
         "additionalProperties": false
       },
+      "CreateOfflinePaymentDto": {
+        "type": "object",
+        "properties": {
+          "bookingId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "amount": {
+            "type": "number",
+            "format": "double"
+          },
+          "note": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
       "CreateRoomRequest": {
         "type": "object",
         "properties": {
@@ -772,34 +771,6 @@
             "nullable": true
           },
           "password": {
-            "type": "string",
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "PaymentRequest": {
-        "type": "object",
-        "properties": {
-          "bookingId": {
-            "type": "string",
-            "format": "uuid"
-          },
-          "paymentMethod": {
-            "type": "string",
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "ProcessPaymentRequest": {
-        "type": "object",
-        "properties": {
-          "bookingId": {
-            "type": "string",
-            "format": "uuid"
-          },
-          "paymentMethod": {
             "type": "string",
             "nullable": true
           }

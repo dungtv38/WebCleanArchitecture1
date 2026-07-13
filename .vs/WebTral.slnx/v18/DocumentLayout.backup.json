@@ -1,7 +1,64 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture1\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{8D6B33C5-CEE1-20B5-A207-99CBB61F699C}|WebAPI\\WebAPI.csproj|c:\\users\\administrator\\source\\repos\\webcleanarchitecture1\\webapi\\controllers\\paymentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8D6B33C5-CEE1-20B5-A207-99CBB61F699C}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\controllers\\paymentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8D6B33C5-CEE1-20B5-A207-99CBB61F699C}|WebAPI\\WebAPI.csproj|c:\\users\\administrator\\source\\repos\\webcleanarchitecture1\\webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8D6B33C5-CEE1-20B5-A207-99CBB61F699C}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F80C4E72-27A0-12B5-0634-DD5C11CFB0C1}|Application\\Application.csproj|c:\\users\\administrator\\source\\repos\\webcleanarchitecture1\\application\\dtos\\createofflinepaymentdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F80C4E72-27A0-12B5-0634-DD5C11CFB0C1}|Application\\Application.csproj|solutionrelative:application\\dtos\\createofflinepaymentdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F80C4E72-27A0-12B5-0634-DD5C11CFB0C1}|Application\\Application.csproj|c:\\users\\administrator\\source\\repos\\webcleanarchitecture1\\application\\dtos\\processpaymentrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F80C4E72-27A0-12B5-0634-DD5C11CFB0C1}|Application\\Application.csproj|solutionrelative:application\\dtos\\processpaymentrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5872AEB3-BAA3-FE31-B0EB-0FB6DBEDCF83}|Infrastructure\\Infrastructure.csproj|c:\\users\\administrator\\source\\repos\\webcleanarchitecture1\\infrastructure\\services\\paymentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5872AEB3-BAA3-FE31-B0EB-0FB6DBEDCF83}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\services\\paymentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F80C4E72-27A0-12B5-0634-DD5C11CFB0C1}|Application\\Application.csproj|c:\\users\\administrator\\source\\repos\\webcleanarchitecture1\\application\\interfaces\\ipaymentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F80C4E72-27A0-12B5-0634-DD5C11CFB0C1}|Application\\Application.csproj|solutionrelative:application\\interfaces\\ipaymentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5872AEB3-BAA3-FE31-B0EB-0FB6DBEDCF83}|Infrastructure\\Infrastructure.csproj|c:\\users\\administrator\\source\\repos\\webcleanarchitecture1\\infrastructure\\persistence\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5872AEB3-BAA3-FE31-B0EB-0FB6DBEDCF83}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\persistence\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5872AEB3-BAA3-FE31-B0EB-0FB6DBEDCF83}|Infrastructure\\Infrastructure.csproj|c:\\users\\administrator\\source\\repos\\webcleanarchitecture1\\infrastructure\\services\\bookingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5872AEB3-BAA3-FE31-B0EB-0FB6DBEDCF83}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\services\\bookingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F80C4E72-27A0-12B5-0634-DD5C11CFB0C1}|Application\\Application.csproj|c:\\users\\administrator\\source\\repos\\webcleanarchitecture1\\application\\interfaces\\ibookingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F80C4E72-27A0-12B5-0634-DD5C11CFB0C1}|Application\\Application.csproj|solutionrelative:application\\interfaces\\ibookingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8D6B33C5-CEE1-20B5-A207-99CBB61F699C}|WebAPI\\WebAPI.csproj|c:\\users\\administrator\\source\\repos\\webcleanarchitecture1\\webapi\\controllers\\bookingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8D6B33C5-CEE1-20B5-A207-99CBB61F699C}|WebAPI\\WebAPI.csproj|solutionrelative:webapi\\controllers\\bookingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F80C4E72-27A0-12B5-0634-DD5C11CFB0C1}|Application\\Application.csproj|c:\\users\\administrator\\source\\repos\\webcleanarchitecture1\\application\\dtos\\createonlinepaymentdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F80C4E72-27A0-12B5-0634-DD5C11CFB0C1}|Application\\Application.csproj|solutionrelative:application\\dtos\\createonlinepaymentdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E528BBC3-1C26-8C35-F682-23718816ADCD}|Domain\\Domain.csproj|c:\\users\\administrator\\source\\repos\\webcleanarchitecture1\\domain\\enums\\paymentstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E528BBC3-1C26-8C35-F682-23718816ADCD}|Domain\\Domain.csproj|solutionrelative:domain\\enums\\paymentstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E528BBC3-1C26-8C35-F682-23718816ADCD}|Domain\\Domain.csproj|c:\\users\\administrator\\source\\repos\\webcleanarchitecture1\\domain\\enums\\bookingstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E528BBC3-1C26-8C35-F682-23718816ADCD}|Domain\\Domain.csproj|solutionrelative:domain\\enums\\bookingstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F80C4E72-27A0-12B5-0634-DD5C11CFB0C1}|Application\\Application.csproj|c:\\users\\administrator\\source\\repos\\webcleanarchitecture1\\application\\interfaces\\ihotelservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F80C4E72-27A0-12B5-0634-DD5C11CFB0C1}|Application\\Application.csproj|solutionrelative:application\\interfaces\\ihotelservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,8 +66,21 @@
       "DocumentGroups": [
         {
           "DockedWidth": 155,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 5,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture1\\WebAPI\\Program.cs",
+              "RelativeDocumentMoniker": "WebAPI\\Program.cs",
+              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture1\\WebAPI\\Program.cs*",
+              "RelativeToolTip": "WebAPI\\Program.cs*",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-13T07:26:55.581Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
@@ -18,6 +88,167 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "BookingController.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture1\\WebAPI\\Controllers\\BookingController.cs",
+              "RelativeDocumentMoniker": "WebAPI\\Controllers\\BookingController.cs",
+              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture1\\WebAPI\\Controllers\\BookingController.cs",
+              "RelativeToolTip": "WebAPI\\Controllers\\BookingController.cs",
+              "ViewState": "AgIAACIAAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-13T07:15:12.638Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ProcessPaymentRequest.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture1\\Application\\DTOs\\ProcessPaymentRequest.cs",
+              "RelativeDocumentMoniker": "Application\\DTOs\\ProcessPaymentRequest.cs",
+              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture1\\Application\\DTOs\\ProcessPaymentRequest.cs",
+              "RelativeToolTip": "Application\\DTOs\\ProcessPaymentRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAgAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-13T07:08:04.1Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "PaymentsController.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture1\\WebAPI\\Controllers\\PaymentsController.cs",
+              "RelativeDocumentMoniker": "WebAPI\\Controllers\\PaymentsController.cs",
+              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture1\\WebAPI\\Controllers\\PaymentsController.cs*",
+              "RelativeToolTip": "WebAPI\\Controllers\\PaymentsController.cs*",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAYwCsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-13T07:06:27.627Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "PaymentService.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture1\\Infrastructure\\Services\\PaymentService.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Services\\PaymentService.cs",
+              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture1\\Infrastructure\\Services\\PaymentService.cs",
+              "RelativeToolTip": "Infrastructure\\Services\\PaymentService.cs",
+              "ViewState": "AgIAAD8AAAAAAAAAAAAswFgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-13T06:55:24.875Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "IPaymentService.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture1\\Application\\Interfaces\\IPaymentService.cs",
+              "RelativeDocumentMoniker": "Application\\Interfaces\\IPaymentService.cs",
+              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture1\\Application\\Interfaces\\IPaymentService.cs",
+              "RelativeToolTip": "Application\\Interfaces\\IPaymentService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAvwBMAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-13T06:48:59.337Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "IBookingService.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture1\\Application\\Interfaces\\IBookingService.cs",
+              "RelativeDocumentMoniker": "Application\\Interfaces\\IBookingService.cs",
+              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture1\\Application\\Interfaces\\IBookingService.cs",
+              "RelativeToolTip": "Application\\Interfaces\\IBookingService.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-13T06:51:00.685Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CreateOfflinePaymentDto.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture1\\Application\\DTOs\\CreateOfflinePaymentDto.cs",
+              "RelativeDocumentMoniker": "Application\\DTOs\\CreateOfflinePaymentDto.cs",
+              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture1\\Application\\DTOs\\CreateOfflinePaymentDto.cs*",
+              "RelativeToolTip": "Application\\DTOs\\CreateOfflinePaymentDto.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwA4AAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-13T07:09:10.04Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture1\\Infrastructure\\Persistence\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Persistence\\AppDbContext.cs",
+              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture1\\Infrastructure\\Persistence\\AppDbContext.cs",
+              "RelativeToolTip": "Infrastructure\\Persistence\\AppDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAABLAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-13T07:17:58.105Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "BookingService.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture1\\Infrastructure\\Services\\BookingService.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Services\\BookingService.cs",
+              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture1\\Infrastructure\\Services\\BookingService.cs",
+              "RelativeToolTip": "Infrastructure\\Services\\BookingService.cs",
+              "ViewState": "AgIAAF4AAAAAAAAAAAAswHQAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-13T06:51:33.743Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "CreateOnlinePaymentDto.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture1\\Application\\DTOs\\CreateOnlinePaymentDto.cs",
+              "RelativeDocumentMoniker": "Application\\DTOs\\CreateOnlinePaymentDto.cs",
+              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture1\\Application\\DTOs\\CreateOnlinePaymentDto.cs",
+              "RelativeToolTip": "Application\\DTOs\\CreateOnlinePaymentDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-13T07:09:08.152Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "PaymentStatus.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture1\\Domain\\Enums\\PaymentStatus.cs",
+              "RelativeDocumentMoniker": "Domain\\Enums\\PaymentStatus.cs",
+              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture1\\Domain\\Enums\\PaymentStatus.cs",
+              "RelativeToolTip": "Domain\\Enums\\PaymentStatus.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-13T06:55:22.906Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "BookingStatus.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture1\\Domain\\Enums\\BookingStatus.cs",
+              "RelativeDocumentMoniker": "Domain\\Enums\\BookingStatus.cs",
+              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture1\\Domain\\Enums\\BookingStatus.cs",
+              "RelativeToolTip": "Domain\\Enums\\BookingStatus.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-13T06:54:27.708Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "IHotelService.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture1\\Application\\Interfaces\\IHotelService.cs",
+              "RelativeDocumentMoniker": "Application\\Interfaces\\IHotelService.cs",
+              "ToolTip": "C:\\Users\\Administrator\\source\\repos\\WebCleanArchitecture1\\Application\\Interfaces\\IHotelService.cs",
+              "RelativeToolTip": "Application\\Interfaces\\IHotelService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-13T06:53:20.63Z"
             }
           ]
         }

@@ -6,11 +6,12 @@ using System.Threading.Tasks;
 
 namespace Application.DTOs
 {
-    public class ProcessPaymentRequest
+    public class CreateOfflinePaymentDto
     {
         public Guid BookingId { get; set; }
-        public string PaymentMethod { get; set; } // Ví dụ: "VNPAY", "MOMO", "COUNTER" (Tại quầy)
-        public string Note { get; set; }
+
         public decimal Amount { get; set; }
+
+        public string? Note { get; set; }
     }
 }

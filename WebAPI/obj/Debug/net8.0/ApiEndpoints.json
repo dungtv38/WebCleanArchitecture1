@@ -121,18 +121,12 @@
   },
   {
     "ContainingType": "API.Controllers.BookingController",
-    "Method": "ProcessPayment",
-    "RelativePath": "api/Booking/process",
-    "HttpMethod": "POST",
+    "Method": "VnpayIpn",
+    "RelativePath": "api/Booking/vnpay-ipn",
+    "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
-    "Parameters": [
-      {
-        "Name": "request",
-        "Type": "API.Controllers.BookingController\u002BPaymentRequest",
-        "IsRequired": true
-      }
-    ],
+    "Parameters": [],
     "ReturnTypes": []
   },
   {
@@ -216,15 +210,15 @@
   },
   {
     "ContainingType": "WebApi.Controllers.PaymentsController",
-    "Method": "ProcessPayment",
-    "RelativePath": "api/Payments/process",
+    "Method": "PayOffline",
+    "RelativePath": "api/Payments/offline",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
         "Name": "request",
-        "Type": "Application.DTOs.ProcessPaymentRequest",
+        "Type": "Application.DTOs.CreateOfflinePaymentDto",
         "IsRequired": true
       }
     ],

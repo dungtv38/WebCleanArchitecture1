@@ -13,8 +13,8 @@ namespace Application.Interfaces
         // Tạo đơn đặt phòng mới (Đã sửa kiểu trả về thành Task<Booking>)
         Task<Booking> CreateAsync(Guid userId, CreateBookingRequest request);
 
-        // Lấy chi tiết một đơn hàng
-        //Task<Booking?> GetByIdAsync(Guid id);
+
+        Task<Booking?> GetByIdAsync(Guid id);
 
         //// Lấy lịch sử đặt phòng của một User
         //Task<List<Booking>> GetUserBookingHistoryAsync(Guid userId);

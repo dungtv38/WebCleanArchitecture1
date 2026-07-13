@@ -113,5 +113,10 @@ namespace Infrastructure.Services
                 throw;
             }
         }
+
+        public Task<Booking?> GetByIdAsync(Guid id)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

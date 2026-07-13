@@ -9,7 +9,7 @@ namespace WebApi.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
-    [Authorize] // Bắt buộc phải truyền JWT Token trong Header mới gọi được
+    [Authorize]
     public class PaymentsController : ControllerBase
     {
         private readonly IPaymentService _paymentService;
@@ -19,28 +19,41 @@ namespace WebApi.Controllers
             _paymentService = paymentService;
         }
 
-        [HttpPost("process")]
-        public async Task<IActionResult> ProcessPayment([FromBody] ProcessPaymentRequest request)
+        [HttpPost("offline")]
+        public async Task<IActionResult> PayOffline([FromBody] CreateOfflinePaymentDto request)
         {
             try
             {
-                var payment = await _paymentService.ProcessPaymentAsync(request);
+                var success = await _paymentService.ProcessOfflinePayment(request);
 
-                // Trả về kết quả thành công cho Frontend nhận diện
                 return Ok(new
                 {
-                    message = request.PaymentMethod.ToUpper() == "COUNTER"
-                        ? "Đăng ký đặt giữ phòng thành công! Vui lòng thanh toán tại quầy khi check-in."
-                        : "Thanh toán qua cổng trực tuyến thành công!",
-                    paymentId = payment.Id,
-                    status = payment.Status.ToString()
+                    message = "Thanh toán thành công",
+                    success
                 });
             }
             catch (Exception ex)
             {
-                // Trả về lỗi 400 kèm câu báo lỗi nghiệp vụ cụ thể (Ví dụ: Đơn phòng đã hủy,...)
-                return BadRequest(new { message = ex.Message });
+                return BadRequest(new
+                {
+                    message = ex.Message
+                });
             }
+        }
+        [AllowAnonymous]
+        [HttpGet("callback")]
+        public async Task<IActionResult> Callback(
+    string transactionCode,
+    bool success)
+        {
+            var result = await _paymentService
+                .HandleIpnCallback(
+                    transactionCode,
+                    success
+                );
+
+
+            return Ok(result);
         }
     }
 }
