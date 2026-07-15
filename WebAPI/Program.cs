@@ -81,7 +81,7 @@ builder.Services.AddCors(options =>
     {
         policy
             .WithOrigins(
-                //"http://localhost:3000", // CRA
+                
                 "http://localhost:5173"  // Vite
             )
             .AllowAnyHeader()

@@ -210,6 +210,27 @@
   },
   {
     "ContainingType": "WebApi.Controllers.PaymentsController",
+    "Method": "Callback",
+    "RelativePath": "api/Payments/callback",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "transactionCode",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "success",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApi.Controllers.PaymentsController",
     "Method": "PayOffline",
     "RelativePath": "api/Payments/offline",
     "HttpMethod": "POST",
